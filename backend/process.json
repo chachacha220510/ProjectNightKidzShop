@@ -1,5 +1,12 @@
 {
   "name": "medusa-backend",
   "script": "npm",
-  "args": "run deploy"
+  "args": "run start",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "pre-deploy": {
+    "script": "npm",
+    "args": "run predeploy"
+  }
 } 
