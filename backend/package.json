@@ -20,7 +20,8 @@
     "dev": "medusa develop",
     "email:dev": "email dev --dir=./src/modules/email-notifications/templates --port=3002",
     "predeploy": "medusa db:migrate",
-    "deploy": "npm run predeploy && npm run start"
+    "deploy": "npm run predeploy && npm run start",
+    "start:production": "medusa db:migrate && init-backend && cd .medusa/server && medusa start --verbose"
   },
   "dependencies": {
     "@medusajs/admin-sdk": "latest",
