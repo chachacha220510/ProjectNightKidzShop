@@ -1,1 +1,79 @@
-.idea/
+# Medusa files
+dist
+.cache
+.wrangler
+.env
+.env.*
+!.env.template
+uploads
+build
+.DS_Store
+
+# Local development scripts - Excluded from git unless explicitly added
+# These scripts are safe to include in git as they don't run during deployment
+# To include a script, use: git add -f <script-name>
+# fix-regions.js    # Script to fix region ID issues - can be safely included in git
+# restart-dev.sh    # Script to restart development servers - can be safely included in git
+# setup-local-db.js # Script to set up local development environment - can be safely included in git
+fix-regions.js
+restart-services.sh
+REGION_ISSUES.md
+SOLUTION.md
+LOCAL_DEV_README.md
+tmp/
+**/node_modules/.cache
+**/.next/cache
+
+# Deployment safety - Scripts that might run during build/deployment must stay ignored
+# If you need to add them, make sure they check for NODE_ENV to avoid running in production
+.deploy-scripts/
+
+# Local production data stuff
+**/backup_data
+
+# Node modules
+node_modules
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Next.js build artifacts
+.next/
+out/
+build/
+
+# Node
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local development
+/tmp
+*.dump
+*.sql
+*.bak
+.env.local.*
+
+# Docker volumes
+/data
+
+# IDE
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Misc
+dist
+build
+.cache
+*.log
