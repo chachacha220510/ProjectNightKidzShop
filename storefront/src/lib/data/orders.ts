@@ -10,10 +10,14 @@ export const retrieveOrder = cache(async function (id: string) {
     .retrieve(
       id,
       { fields: "*payment_collections.payments" },
-      { next: { tags: ["order"] }, ...getAuthHeaders() }
+      { next: { tags: ["order"] }, ...await getAuthHeaders() }
     )
     .then(({ order }) => order)
     .catch((err) => medusaError(err))
+})
+
+export const getOrder = cache(async function (id: string) {
+  return retrieveOrder(id)
 })
 
 export const listOrders = cache(async function (

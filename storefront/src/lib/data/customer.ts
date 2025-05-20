@@ -10,7 +10,7 @@ import { getAuthHeaders, removeAuthToken, setAuthToken } from "./cookies"
 
 export const getCustomer = cache(async function () {
   return await sdk.store.customer
-    .retrieve({}, { next: { tags: ["customer"] }, ...getAuthHeaders() })
+    .retrieve({}, { next: { tags: ["customer"] }, ...await getAuthHeaders() })
     .then(({ customer }) => customer)
     .catch(() => null)
 })
@@ -64,28 +64,27 @@ export async function signup(_currentState: unknown, formData: FormData) {
   }
 }
 
-export async function login(_currentState: unknown, formData: FormData) {
-  const email = formData.get("email") as string
-  const password = formData.get("password") as string
-
-  try {
-    await sdk.auth
-      .login("customer", "emailpass", { email, password })
-      .then((token) => {
-        setAuthToken(typeof token === 'string' ? token : token.location)
+export async function signIn(credentials: {
+  email: string
+  password: string
+}): Promise<HttpTypes.StoreResponse<HttpTypes.StoreCustomersLoginRes>> {
+  return await sdk.store.auth
+    .login(credentials)
+    .then(async (data) => {
+      await setAuthToken(data.customer.id)
         revalidateTag("customer")
+      
+      return data
       })
-  } catch (error: any) {
-    return error.toString()
-  }
+    .catch((err) => {
+      throw medusaError(err)
+    })
 }
 
-export async function signout(countryCode: string) {
-  await sdk.auth.logout()
-  removeAuthToken()
-  revalidateTag("auth")
+export async function signOut() {
+  await removeAuthToken()
   revalidateTag("customer")
-  redirect(`/${countryCode}/account`)
+  redirect("/")
 }
 
 export const addCustomerAddress = async (

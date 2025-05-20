@@ -31,9 +31,22 @@ const Shipping: React.FC<ShippingProps> = ({
 
   const isOpen = searchParams.get("step") === "delivery"
 
+  const initialShippingMethodId = cart.shipping_methods?.at(-1)?.shipping_option_id
+
+  const [selectedOptionId, setSelectedOptionId] = useState<string | undefined>(
+    initialShippingMethodId
+  )
+
+  // Update local state when cart shipping methods change
+  useEffect(() => {
+    const shippingOptionId = cart.shipping_methods?.at(-1)?.shipping_option_id
+    if (shippingOptionId) {
+      setSelectedOptionId(shippingOptionId)
+    }
+  }, [cart.shipping_methods])
+
   const selectedShippingMethod = availableShippingMethods?.find(
-    // To do: remove the previously selected shipping method instead of using the last one
-    (method) => method.id === cart.shipping_methods?.at(-1)?.shipping_option_id
+    (method) => method.id === selectedOptionId
   )
 
   const handleEdit = () => {
@@ -46,6 +59,7 @@ const Shipping: React.FC<ShippingProps> = ({
 
   const set = async (id: string) => {
     setIsLoading(true)
+    setSelectedOptionId(id)
     await setShippingMethod({ cartId: cart.id, shippingMethodId: id })
       .catch((err) => {
         setError(err.message)
@@ -95,7 +109,10 @@ const Shipping: React.FC<ShippingProps> = ({
       {isOpen ? (
         <div data-testid="delivery-options-container">
           <div className="pb-8">
-            <RadioGroup value={selectedShippingMethod?.id} onChange={set}>
+            <RadioGroup 
+              value={selectedOptionId || ""} 
+              onChange={set}
+            >
               {availableShippingMethods?.map((option) => {
                 return (
                   <RadioGroup.Option
@@ -106,13 +123,13 @@ const Shipping: React.FC<ShippingProps> = ({
                       "flex items-center justify-between text-small-regular cursor-pointer py-4 border rounded-rounded px-8 mb-2 hover:shadow-borders-interactive-with-active",
                       {
                         "border-ui-border-interactive":
-                          option.id === selectedShippingMethod?.id,
+                          option.id === selectedOptionId,
                       }
                     )}
                   >
                     <div className="flex items-center gap-x-4">
                       <Radio
-                        checked={option.id === selectedShippingMethod?.id}
+                        checked={option.id === selectedOptionId}
                       />
                       <span className="text-base-regular">{option.name}</span>
                     </div>
@@ -138,7 +155,7 @@ const Shipping: React.FC<ShippingProps> = ({
             className="mt-6"
             onClick={handleSubmit}
             isLoading={isLoading}
-            disabled={!cart.shipping_methods?.[0]}
+            disabled={!selectedOptionId}
             data-testid="submit-delivery-option-button"
           >
             Continue to payment
