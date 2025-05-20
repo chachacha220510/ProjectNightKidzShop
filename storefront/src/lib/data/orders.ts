@@ -16,6 +16,25 @@ export const retrieveOrder = cache(async function (id: string) {
     .catch((err) => medusaError(err))
 })
 
+export const getAndVerifyOrder = async (input: any) => {
+  return sdk.store.order
+    .confirm(input, { next: { tags: ["order"] }, ...await getAuthHeaders() })
+    .then(({ order }) => order)
+    .catch((err) => medusaError(err))
+}
+
+export const retrieveOrders = cache(async function () {
+  return sdk.store.order
+    .getCustomerOrders(
+      {},
+      { next: { tags: ["order"] }, ...await getAuthHeaders() }
+    )
+    .then(({ orders }) => orders)
+    .catch((err) => {
+      return []
+    })
+})
+
 export const getOrder = cache(async function (id: string) {
   return retrieveOrder(id)
 })
@@ -25,7 +44,7 @@ export const listOrders = cache(async function (
   offset: number = 0
 ) {
   return sdk.store.order
-    .list({ limit, offset }, { next: { tags: ["order"] }, ...getAuthHeaders() })
+    .list({ limit, offset }, { next: { tags: ["order"] }, ...await getAuthHeaders() })
     .then(({ orders }) => orders)
     .catch((err) => medusaError(err))
 })
