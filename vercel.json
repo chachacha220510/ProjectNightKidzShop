@@ -1,9 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm build",
-  "devCommand": "pnpm dev",
-  "installCommand": "pnpm install --no-frozen-lockfile",
-  "framework": null,
+  "framework": "nextjs",
   "outputDirectory": ".next",
   "images": {
     "sizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
