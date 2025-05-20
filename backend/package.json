@@ -21,14 +21,14 @@
     "email:dev": "email dev --dir=./src/modules/email-notifications/templates --port=3002"
   },
   "dependencies": {
-    "@medusajs/admin-sdk": "^7.1.1",
-    "@medusajs/cli": "^1.3.20",
-    "@medusajs/core-flows": "^1.1.7",
-    "@medusajs/framework": "^0.1.7",
-    "@medusajs/medusa": "^1.18.1",
-    "@medusajs/notification-sendgrid": "^0.2.0",
-    "@medusajs/payment-stripe": "^6.0.4",
-    "@medusajs/workflow-engine-redis": "^0.2.0",
+    "@medusajs/admin-sdk": "preview",
+    "@medusajs/cli": "preview",
+    "@medusajs/core-flows": "preview",
+    "@medusajs/framework": "preview",
+    "@medusajs/medusa": "preview",
+    "@medusajs/notification-sendgrid": "preview",
+    "@medusajs/payment-stripe": "preview",
+    "@medusajs/workflow-engine-redis": "preview",
     "@mikro-orm/core": "6.4.3",
     "@mikro-orm/knex": "6.4.3",
     "@mikro-orm/migrations": "6.4.3",
@@ -43,7 +43,7 @@
     "ulid": "^2.3.0"
   },
   "devDependencies": {
-    "@medusajs/test-utils": "^0.1.7",
+    "@medusajs/test-utils": "preview",
     "@mikro-orm/cli": "6.4.3",
     "@swc/core": "1.5.7",
     "@swc/jest": "^0.2.37",
