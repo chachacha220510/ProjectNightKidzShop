@@ -1,1 +1,35 @@
-.idea/
+# Node modules
+node_modules
+
+# Build files
+dist
+.cache
+build
+coverage
+.env*
+!.env.template
+.DS_Store
+*.orig
+yarn-error.log
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.yarn/*
+!.yarn/releases
+
+# Medusa files
+.medusa/api
+.medusa/medusa-db.sql
+.medusa/medusa-db-previous.sql
+
+# Project specific
+.next
+# Database dump files
+tmp/backups/*.sql
+tmp/*.sql

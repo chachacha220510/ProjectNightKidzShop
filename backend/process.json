@@ -1,5 +1,0 @@
-{
-  "name": "medusa-backend",
-  "script": "npm",
-  "args": "run start:production"
-} 

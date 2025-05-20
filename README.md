@@ -1,103 +1,143 @@
+# NightKidz Shop E-commerce Platform
+
 <p align="center">
-  <a href="https://www.medusajs.com">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-      <img alt="Medusa logo" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg" width=100>
-    </picture>
-  </a>
-  <a href="https://railway.app/template/gkU-27?referralCode=-Yg50p">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://railway.app/brand/logo-light.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://railway.app/brand/logo-dark.svg">
-      <img alt="Railway logo" src="https://railway.app/brand/logo-light.svg" width=100>
-    </picture>
-  </a>
+  <img src="storefront/public/images/logo.png" alt="NightKidz Logo" width="200" />
 </p>
 
 <h2 align="center">
-  Prebaked medusajs 2.0 monorepo
-</h2>
-<h4 align="center">
-  Backend + Storefront + postgres + redis + MinIO + MeiliSearch
-</h4>
-
-<h2 align="center">
-  <a href="https://railway.app/template/gkU-27?referralCode=-Yg50p">one-click deploy on railway!</a>
+  Premium Streetwear & Urban Fashion
 </h2>
 
-<h1 align="center">
-  Need help?<br>
-  <a href="https://funkyton.com/medusajs-2-0-is-finally-here/">Step by step deploy guide, and video instructions</a>
-</h1>
+## About NightKidz
 
-<p align="center">
-Combine Medusa's modules for your commerce backend with the newest Next.js 14 features for a performant storefront.</p>
+NightKidz is a premium streetwear and urban fashion brand catering to fashion-forward individuals who embrace nightlife culture and street aesthetics. Our e-commerce platform provides a seamless shopping experience with a focus on product quality, user experience, and reliable order fulfillment.
 
-## About this boilerplate
-This boilerplate is a monorepo consisting of the officially released MedusaJS 2.0 backend and storefront application. It is a pre-configured, ready-to-deploy solution, modified for seamless deployment on [railway.app](https://railway.app?referralCode=-Yg50p).
+## Technology Stack
 
-Updated: to `version 2.6.1` 🥳
+Our e-commerce platform is built on a modern, performance-focused stack:
 
-## Preconfigured 3rd party integrations
+- **Backend**: [Medusa.js 2.0](https://medusajs.com/) - Open-source headless commerce platform
+- **Storefront**: [Next.js 14](https://nextjs.org/) - React framework with SSR capabilities
+- **Admin Panel**: Medusa Admin Dashboard
+- **Database**: PostgreSQL
+- **Search**: MeiliSearch for powerful product discovery
+- **Media Storage**: MinIO for scalable object storage
+- **Email**: Resend for transactional emails
+- **Payments**: Stripe integration
 
-- MinIO file storage: Replaces local file storage with MinIO cloud storage, automatically creating a 'medusa-media' bucket for your media files. [README](backend/src/modules/minio-file/README.md)
-- Resend email integration [Watch setup video](https://youtu.be/pbdZm26YDpE?si=LQTHWeZMLD4w3Ahw) - special thanks to [aleciavogel](https://github.com/aleciavogel) for Resend notification service, and react-email implementation! [README](backend/src/modules/email-notifications/README.md)
-- Stripe payment service: [Watch setup video](https://youtu.be/dcSOpIzc1Og)
-- Meilisearch integration by [Rokmohar](https://github.com/rokmohar/medusa-plugin-meilisearch): Adds powerful product search capabilities to your store. When deployed on Railway using the template, MeiliSearch is automatically configured. (For non-railway'ers: [Watch setup video](https://youtu.be/hrXcc5MjApI))
+## Local Development Setup
 
-# /backend
+### Prerequisites
 
-### local setup
-Video instructions: https://youtu.be/PPxenu7IjGM
+- Node.js (v18+)
+- npm or pnpm
+- PostgreSQL (v15+) running on port 5433
+- Docker (optional, for containerized services)
 
-- `cd /backend`
-- `pnpm install` or `npm i`
-- Rename `.env.template` ->  `.env`
-- To connect to your online database from your local machine, copy the `DATABASE_URL` value auto-generated on Railway and add it to your `.env` file.
-  - If connecting to a new database, for example a local one, run `pnpm ib` or `npm run ib` to seed the database.
-- `pnpm dev` or `npm run dev`
+### Quick Start
 
-### requirements
-- **postgres database** (Automatic setup when using the Railway template)
-- **redis** (Automatic setup when using the Railway template) - fallback to simulated redis.
-- **MinIO storage** (Automatic setup when using the Railway template) - fallback to local storage.
-- **Meilisearch** (Automatic setup when using the Railway template)
+#### 1. Clone the Repository
 
-### commands
+```bash
+git clone https://github.com/[your-org]/ProjectNightKidzShop.git
+cd ProjectNightKidzShop
+```
 
-`cd backend/`
-`npm run ib` or `pnpm ib` will initialize the backend by running migrations and seed the database with required system data.
-`npm run dev` or `pnpm dev` will start the backend (and admin dashboard frontend on `localhost:9000/app`) in development mode.
-`pnpm build && pnpm start` will compile the project and run from compiled source. This can be useful for reproducing issues on your cloud instance.
+#### 2. Set Up Local Database
 
-# /storefront
+We provide a comprehensive database setup script that handles all necessary configurations:
 
-### local setup
-Video instructions: https://youtu.be/PPxenu7IjGM
+```bash
+./nightkidz-db-setup.js
+```
 
-Install dependencies `npm i` of `pnpm i`
-Rename `.env.local.template` ->  `.env.local`
+This script will:
 
-### requirements
-- A running backend on port 9000 is required to fetch product data and other information needed to build Next.js pages.
+- Pull data from the production database
+- Replace your local database with production data
+- Run all necessary migrations
+- Fix common data inconsistencies
+- Verify database integrity
 
-### commands
-`cd storefront/`
-`npm run dev` or `pnpm dev` will run the storefront on uncompiled code, with hot-reloading as files are saved with changes.
+#### 3. Configure Environment Variables
 
-## Useful resources
-- How to setup credit card payment with Stripe payment module: https://youtu.be/dcSOpIzc1Og
-- https://funkyton.com/medusajs-2-0-is-finally-here/#succuessfully-deployed-whats-next
-  
-<p align="center">
-  <a href="https://funkyton.com/">
-    <div style="text-align: center;">
-      A template by,
-      <br>
-      <picture>
-        <img alt="FUNKYTON logo" src="https://res-5.cloudinary.com/hczpmiapo/image/upload/q_auto/v1/ghost-blog-images/funkyton-logo.png" width=200>
-      </picture>
-    </div>
-  </a>
-</p>
+```bash
+# Backend
+cd backend
+cp .env.template .env
+# Edit .env with your local configuration
+
+# Storefront
+cd ../storefront
+cp .env.local.template .env.local
+# Edit .env.local with your local configuration
+```
+
+#### 4. Start Development Servers
+
+**Backend:**
+
+```bash
+cd backend
+npm run dev
+```
+
+The admin panel will be available at: http://localhost:9000/app
+
+**Storefront:**
+
+```bash
+cd storefront
+npm run dev
+```
+
+The storefront will be available at: http://localhost:8000
+
+## Key Features
+
+- **Multi-Region Support**: Serve customers across different regions with localized pricing
+- **Inventory Management**: Real-time stock tracking and management
+- **Advanced Product Search**: Faceted search with filtering options powered by MeiliSearch
+- **Customer Accounts**: User registration, order history, and saved addresses
+- **Order Management**: Comprehensive order processing workflow
+- **Payment Processing**: Secure checkout with Stripe integration
+- **Responsive Design**: Mobile-first approach for all customer-facing interfaces
+- **Admin Dashboard**: Complete control over products, orders, and customers
+
+## Deployment
+
+### Production Environment
+
+The NightKidz Shop is deployed on [Railway](https://railway.app) with automatic deployments triggered from the main branch. The production environment uses:
+
+- PostgreSQL database on Railway
+- Redis for caching and session management
+- MinIO for media storage
+- MeiliSearch for product search capabilities
+
+### Deployment Configuration
+
+For production deployments, ensure these environment variables are properly configured:
+
+- `DATABASE_URL`: Production database connection string
+- `REDIS_URL`: Redis connection string
+- `MINIO_ENDPOINT`, `MINIO_ACCESS_KEY`, etc.: MinIO configuration
+- `STRIPE_API_KEY`: Stripe payment processing key
+- `RESEND_API_KEY`: Email service API key
+
+## Troubleshooting
+
+If you encounter any issues during local development, ensure:
+
+1. PostgreSQL is running on port 5433
+2. All required environment variables are correctly set
+3. You've run the database setup script
+4. Node.js version is compatible (v18+)
+
+For persistent issues, check the backend logs or contact the development team.
+
+## License
+
+This project is proprietary and confidential. Unauthorized copying, distribution, or use is strictly prohibited.
+
+© 2024 NightKidz, All Rights Reserved
