@@ -1,7 +1,10 @@
 {
   "version": 2,
+  "buildCommand": "cd storefront && pnpm install --no-frozen-lockfile && pnpm build",
+  "devCommand": "cd storefront && pnpm dev",
+  "installCommand": "cd storefront && pnpm install --no-frozen-lockfile",
   "framework": "nextjs",
-  "outputDirectory": ".next",
+  "outputDirectory": "storefront/.next",
   "images": {
     "sizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     "domains": [
@@ -36,6 +39,9 @@
       }
     ]
   },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ],
   "env": {
     "NEXT_PUBLIC_MEDUSA_BACKEND_URL": "https://backend-production-39d4.up.railway.app",
     "NEXT_PUBLIC_BASE_URL": "https://storefront-production-d8f8.up.railway.app",
