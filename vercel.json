@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "buildCommand": "cd storefront && pnpm install && pnpm build",
-  "devCommand": "cd storefront && pnpm dev",
-  "installCommand": "cd storefront && pnpm install",
+  "buildCommand": "pnpm install && pnpm build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install",
   "framework": null,
-  "outputDirectory": "storefront/.next",
+  "outputDirectory": ".next",
   "images": {
     "sizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     "domains": [
