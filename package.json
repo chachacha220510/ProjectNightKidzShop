@@ -1,25 +1,12 @@
 {
-  "name": "medusa-next",
-  "version": "1.0.4",
+  "name": "nightkidz-shop",
+  "version": "1.0.0",
   "private": true,
-  "author": "Kasper Fabricius Kristensen <kasper@medusajs.com> & Victor Gerbrands <victor@medusajs.com> (https://www.medusajs.com)",
-  "description": "Next.js Starter to be used with Medusa server",
-  "keywords": [
-    "medusa-storefront"
-  ],
   "scripts": {
-    "wait": "await-backend",
-    "launcher": "launch-storefront",
-    "dev": "npm run wait && npm run launcher dev",
-    "build": "npm run wait && npm run launcher build",
-    "start": "npm run launcher start",
-    "build:next": "next build",
-    "lint": "next lint",
-    "analyze": "ANALYZE=true next build",
-    "test-e2e": "playwright test e2e"
-  },
-  "resolutions": {
-    "webpack": "^5"
+    "dev": "cd storefront && pnpm dev",
+    "build": "cd storefront && pnpm build",
+    "start": "cd storefront && pnpm start",
+    "lint": "cd storefront && pnpm lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -69,4 +56,4 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.2"
   }
-}
+} 

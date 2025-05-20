@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "framework": null,
+  "outputDirectory": ".next",
+  "images": {
+    "sizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    "domains": [
+      "localhost",
+      "bucket-production-fe3b.up.railway.app",
+      "backend-production-39d4.up.railway.app",
+      "medusa-public-images.s3.eu-west-1.amazonaws.com",
+      "medusa-server-testing.s3.amazonaws.com",
+      "medusa-server-testing.s3.us-east-1.amazonaws.com",
+      "medusa-public-images.s3.amazonaws.com"
+    ],
+    "remotePatterns": [
+      {
+        "protocol": "http",
+        "hostname": "localhost"
+      },
+      {
+        "protocol": "https",
+        "hostname": "*.railway.app"
+      },
+      {
+        "protocol": "https",
+        "hostname": "*.s3.amazonaws.com"
+      },
+      {
+        "protocol": "https",
+        "hostname": "*.s3.us-east-1.amazonaws.com"
+      },
+      {
+        "protocol": "https",
+        "hostname": "*.s3.eu-west-1.amazonaws.com"
+      }
+    ]
+  },
+  "env": {
+    "NEXT_PUBLIC_MEDUSA_BACKEND_URL": "https://backend-production-39d4.up.railway.app",
+    "NEXT_PUBLIC_BASE_URL": "https://storefront-production-d8f8.up.railway.app",
+    "NEXT_PUBLIC_DEFAULT_REGION": "us",
+    "NEXT_PUBLIC_SEARCH_ENDPOINT": "https://meilisearch-production-769d.up.railway.app",
+    "NEXT_PUBLIC_SEARCH_API_KEY": "qlkl1sschhh6gkyk0hfjg7od7vhp3vf7",
+    "NEXT_PUBLIC_INDEX_NAME": "products",
+    "NEXT_PUBLIC_MINIO_ENDPOINT": "https://bucket-production-fe3b.up.railway.app"
+  }
+} 
