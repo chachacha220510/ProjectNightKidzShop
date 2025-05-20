@@ -1,181 +1,116 @@
-# NightKidz Shop - Local Development Guide
+# NightKidz Shop - Local Development Setup
 
-This guide explains how to set up and run the NightKidz Shop locally for development purposes.
+This guide explains how to set up and manage your local development environment for the NightKidz Shop e-commerce application.
 
 ## Prerequisites
 
 - Node.js (v22.x)
-- npm/pnpm
-- Docker and Docker Compose
-- PostgreSQL client tools (`psql`, `pg_dump`)
-- Git
+- npm (v10.x) or pnpm
+- PostgreSQL (v15+) running on port 5433
+- Docker (optional, for running services in containers)
 
-## Development Environment Scripts
+## Quick Start Guide
 
-This repository includes several scripts to make local development easier:
+### 1. Pull Remote Database & Setup Local Environment
 
-### 1. `setup-local-db.js`
-
-This script helps set up your local development database with options to:
-
-- Start with a fresh database (seeded with test data)
-- Import production data from Railway
-
-To use it:
+The fastest way to get your local environment ready is to use our one-command database pull tool:
 
 ```bash
-node setup-local-db.js
+# Pull the production database, run migrations, and fix region references in one command
+./pull-remote-db.js
 ```
 
-Key features:
+This script will:
 
-- Manages Docker services (PostgreSQL, Redis, MeiliSearch, MinIO)
-- Handles database migrations
-- Fixes common issues with imported production data
-- Fixes region ID problems that often occur between environments
+- Download the latest production database
+- Import it to your local PostgreSQL instance
+- Run all necessary database migrations
+- Fix any region ID reference issues
+- Set up your environment to work with the storefront and admin
 
-### 2. `restart-dev.sh`
+Once completed, you can start your development servers.
 
-This script provides a quick way to restart your development environment and fix common issues:
+### 2. Start Development Servers
+
+#### Backend Server
 
 ```bash
-./restart-dev.sh [options]
+cd backend
+npm run dev
 ```
 
-Options:
+Admin panel: http://localhost:9000/app
 
-- `--fix-regions`: Fix region ID issues in the database
-- `--fix-schema`: Fix database schema issues
-- `--migrate`: Run database migrations
-- `--help`: Show help message
-
-### 3. `fix-regions.js`
-
-A standalone script to fix region ID issues:
+#### Storefront
 
 ```bash
-node fix-regions.js
+cd storefront
+npm run dev
 ```
 
-This is useful when you encounter "Region not found" errors in the storefront.
+Storefront: http://localhost:8000
 
-## Setting Up From Scratch
+## Additional Utilities
 
-Follow these steps to set up a development environment from scratch:
+### Quick Database Update
 
-1. Clone the repository
+If you've already pulled the production database but need to run migrations and fix regions:
 
-   ```bash
-   git clone https://github.com/chachacha220510/ProjectNightKidzShop.git
-   cd ProjectNightKidzShop
-   ```
+```bash
+# Only run migrations and fix region references (no database pull)
+./update-db.js
+```
 
-2. Run the setup script
+### Region ID Fixer
 
-   ```bash
-   node setup-local-db.js
-   ```
+If you're experiencing region-related errors in your application:
 
-   Follow the prompts to either:
-
-   - Start with a fresh local database, or
-   - Import data from your production database
-
-3. Start the development servers
-
-   ```bash
-   # In one terminal
-   cd backend
-   npm run dev
-
-   # In another terminal
-   cd storefront
-   npm run dev
-   ```
-
-4. Access the services
-   - Storefront: http://localhost:8000
-   - Admin Panel: http://localhost:9000/app
-   - MeiliSearch: http://localhost:7700
-   - MinIO Console: http://localhost:9001 (login: minio / minio123)
+```bash
+# Fix region ID references only
+./fix-regions.js
+```
 
 ## Common Issues and Solutions
 
-### Region ID Issues
+### Region ID Mismatches
 
-If you encounter "Region not found" errors after importing production data:
+Region ID references can get out of sync between environments. This causes errors like:
 
-1. Run the fix-regions script:
+- "Invalid region" errors
+- Products not showing up in the storefront
+- Cart creation failures
+- Shipping/payment method errors
 
-   ```bash
-   ./restart-dev.sh --fix-regions
-   ```
-
-2. Clear your browser caches:
-   - Open developer tools (F12)
-   - Go to Application > Storage > Local Storage
-   - Clear storage for localhost:8000
-   - Also clear Session Storage if available
+**Solution**: Run `./update-db.js` to fix region references.
 
 ### Database Schema Issues
 
-If you encounter database schema-related errors:
+If you're seeing errors related to missing columns or tables:
 
-1. Run the schema fix:
+**Solution**: Run `./update-db.js` to apply the latest migrations.
 
-   ```bash
-   ./restart-dev.sh --fix-schema
-   ```
+### Working with Docker
 
-2. If that doesn't work, try running migrations:
-   ```bash
-   ./restart-dev.sh --migrate
-   ```
-
-### Docker-Related Issues
-
-If Docker containers aren't running correctly:
-
-1. Check Docker status:
-
-   ```bash
-   docker ps
-   ```
-
-2. Restart the Docker services:
-
-   ```bash
-   docker compose down
-   docker compose up -d
-   ```
-
-3. Check container logs:
-   ```bash
-   docker compose logs postgres
-   docker compose logs redis
-   ```
-
-## Separation Between Local Development and Deployment
-
-The local development tools in this repository (setup-local-db.js, restart-dev.sh, etc.) are designed to run **only in local development environments**. They include safety checks to prevent running in production.
-
-The deployment configuration for Railway is kept separate and uses Railway's built-in mechanisms for deployment.
-
-## Database Backup and Restore
-
-To manually backup your local database:
+If you prefer to use Docker for your PostgreSQL database:
 
 ```bash
-pg_dump "postgres://postgres:postgres@localhost:5433/medusa_local" > backup.sql
+# Start PostgreSQL container
+docker run -d --name medusa-postgres -p 5433:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=medusa_local postgres:15
+
+# Stop PostgreSQL container
+docker stop medusa-postgres
 ```
 
-To restore from a backup:
+## Troubleshooting Tips
 
-```bash
-psql "postgres://postgres:postgres@localhost:5433/medusa_local" < backup.sql
-```
+1. **Clear your browser cache**: Some issues can be resolved by clearing localStorage and sessionStorage.
+
+2. **Restart the development servers**: Sometimes a simple restart fixes issues.
+
+3. **Verify database connection**: Make sure your PostgreSQL server is running on port 5433.
+
+4. **Check logs**: Backend logs often provide hints about what's going wrong.
 
 ## Additional Resources
 
-- [Medusa Documentation](https://docs.medusajs.com/)
-- [Next.js Documentation](https://nextjs.org/docs)
+For more information about Medusa.js, refer to the [official documentation](https://docs.medusajs.com/).

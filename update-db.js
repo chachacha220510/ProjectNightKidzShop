@@ -1,11 +1,16 @@
 #!/usr/bin/env node
 
 /**
- * Script to fix region ID references in the local database.
- * Use this when encountering region-related errors in the storefront or admin.
+ * Script to update the local Medusa database:
+ * 1. Run database migrations
+ * 2. Fix region ID references
+ *
+ * This is a simplified version of setup-local-db.js for quick database updates.
  */
 
+const { execSync } = require("child_process");
 const { Pool } = require("pg");
+const path = require("path");
 
 // Configuration
 const DEFAULT_LOCAL_DB = "medusa_local";
@@ -22,24 +27,53 @@ const YELLOW = "\x1b[33m";
 const BLUE = "\x1b[34m";
 const CYAN = "\x1b[36m";
 
-async function fixRegionReferences() {
-  console.log(`${BLUE}===== NightKidz Shop Region ID Fixer =====${RESET}`);
+async function main() {
+  console.log(`${BLUE}===== NightKidz Shop Database Update Tool =====${RESET}`);
   console.log(
-    `${CYAN}This script will fix region references in your local database.${RESET}\n`
+    `${CYAN}Running migrations and fixing region references...${RESET}\n`
   );
+
+  try {
+    // Run database migrations
+    await runDatabaseMigrations();
+
+    // Fix region references
+    await fixRegionReferences();
+
+    console.log(`\n${GREEN}✓ Database update completed successfully!${RESET}`);
+  } catch (error) {
+    console.error(`${RED}Error: ${error.message}${RESET}`);
+    process.exit(1);
+  }
+}
+
+async function runDatabaseMigrations() {
+  console.log(`${CYAN}Running database migrations...${RESET}`);
+
+  try {
+    // Get backend directory path
+    const backendDir = path.join(process.cwd(), "backend");
+
+    // Run Medusa migrations
+    execSync(`cd ${backendDir} && npx medusa db:migrate`, {
+      stdio: "inherit",
+    });
+
+    console.log(`${GREEN}✓ Database migrations applied${RESET}`);
+  } catch (error) {
+    console.error(`${RED}Failed to run migrations: ${error.message}${RESET}`);
+    throw error;
+  }
+}
+
+async function fixRegionReferences() {
+  console.log(`\n${CYAN}Fixing region references...${RESET}`);
 
   const localDbHost = process.env.DB_HOST || DEFAULT_LOCAL_DB_HOST;
   const localDbPort = process.env.DB_PORT || DEFAULT_LOCAL_DB_PORT;
   const localDbName = process.env.DB_NAME || DEFAULT_LOCAL_DB;
   const localDbUser = process.env.DB_USER || DEFAULT_LOCAL_DB_USER;
   const localDbPassword = process.env.DB_PASSWORD || DEFAULT_LOCAL_DB_PASSWORD;
-
-  console.log(`${CYAN}Local database connection:${RESET}`);
-  console.log(`  Host: ${localDbHost}`);
-  console.log(`  Port: ${localDbPort}`);
-  console.log(`  Database: ${localDbName}`);
-  console.log(`  User: ${localDbUser}`);
-  console.log("");
 
   try {
     // Create a connection pool to the local database
@@ -52,29 +86,25 @@ async function fixRegionReferences() {
     });
 
     // Get all available region IDs
-    console.log(`${CYAN}Retrieving valid region IDs...${RESET}`);
     const regionResult = await pool.query(
       "SELECT id FROM region WHERE deleted_at IS NULL LIMIT 1"
     );
 
     if (regionResult.rows.length === 0) {
-      console.error(
-        `${RED}✗ No available regions found in the database${RESET}`
-      );
+      console.error(`${RED}No available regions found in the database${RESET}`);
       await pool.end();
-      process.exit(1);
+      return;
     }
 
     const regionId = regionResult.rows[0].id;
-    console.log(`${CYAN}Found replacement region ID: ${regionId}${RESET}`);
+    console.log(`${CYAN}Found valid region ID: ${regionId}${RESET}`);
 
     // Get all problematic region IDs to replace them
-    console.log(`${CYAN}Finding problematic region IDs...${RESET}`);
     const problematicRegionsQuery = await pool.query(
       "SELECT DISTINCT region_id FROM cart WHERE region_id NOT IN (SELECT id FROM region WHERE deleted_at IS NULL) AND region_id IS NOT NULL"
     );
 
-    // Add hardcoded known problematic IDs
+    // Add hardcoded known problematic ID
     const problematicRegionIds = ["reg_01JVK89Q8PEA1EMJS7FPBN12VF"];
 
     // Add any additional problematic IDs found
@@ -83,6 +113,12 @@ async function fixRegionReferences() {
         problematicRegionIds.push(row.region_id);
       }
     });
+
+    if (problematicRegionIds.length === 0) {
+      console.log(`${GREEN}✓ No problematic region IDs found${RESET}`);
+      await pool.end();
+      return;
+    }
 
     console.log(
       `${CYAN}Found ${problematicRegionIds.length} problematic region IDs to fix${RESET}`
@@ -103,66 +139,31 @@ async function fixRegionReferences() {
     for (const table of tables) {
       try {
         for (const problematicId of problematicRegionIds) {
-          console.log(
-            `${CYAN}Updating region references in ${table} table...${RESET}`
-          );
           await pool.query(
             `UPDATE ${table} SET region_id = $1 WHERE region_id = $2`,
             [regionId, problematicId]
           );
         }
+        console.log(
+          `${GREEN}✓ Fixed region references in ${table} table${RESET}`
+        );
       } catch (err) {
         // Skip tables that don't have region_id column
         console.log(
-          `${YELLOW}Skipping table ${table} (might not have region_id column)${RESET}`
+          `${YELLOW}Skipped ${table} table (no region_id column)${RESET}`
         );
       }
-    }
-
-    // Check if there are any remaining invalid region references
-    console.log(`${CYAN}Checking for any remaining issues...${RESET}`);
-    let fixedAllIssues = true;
-
-    for (const table of tables) {
-      try {
-        const checkQuery = await pool.query(
-          `SELECT COUNT(*) FROM ${table} WHERE region_id NOT IN (SELECT id FROM region WHERE deleted_at IS NULL) AND region_id IS NOT NULL`
-        );
-
-        if (checkQuery.rows[0].count > 0) {
-          console.log(
-            `${YELLOW}Warning: ${table} still has ${checkQuery.rows[0].count} invalid region references${RESET}`
-          );
-          fixedAllIssues = false;
-        }
-      } catch (err) {
-        // Ignore errors for tables that don't have region_id
-      }
-    }
-
-    if (fixedAllIssues) {
-      console.log(`${GREEN}✓ All region references fixed successfully${RESET}`);
-    } else {
-      console.log(
-        `${YELLOW}⚠ Some region references could not be fixed automatically${RESET}`
-      );
-      console.log(
-        `${YELLOW}  This may be due to complex data relationships or custom tables${RESET}`
-      );
     }
 
     await pool.end();
-    console.log(`\n${GREEN}===== Region fix process completed! =====${RESET}`);
+    console.log(`${GREEN}✓ All region references fixed${RESET}`);
   } catch (error) {
     console.error(
-      `${RED}✗ Error fixing region references: ${error.message}${RESET}`
+      `${RED}Failed to fix region references: ${error.message}${RESET}`
     );
-    process.exit(1);
+    throw error;
   }
 }
 
-// Run the function
-fixRegionReferences().catch((error) => {
-  console.error(`${RED}Fatal error: ${error.message}${RESET}`);
-  process.exit(1);
-});
+// Run the main function
+main();
