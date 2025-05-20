@@ -1,0 +1,3728 @@
+[
+  {
+    "name": "medusa-next",
+    "version": "1.0.4",
+    "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront",
+    "private": true,
+    "dependencies": {
+      "@headlessui/react": {
+        "from": "@headlessui/react",
+        "version": "1.7.19",
+        "resolved": "https://registry.npmjs.org/@headlessui/react/-/react-1.7.19.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@headlessui+react@1.7.19_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@headlessui/react"
+      },
+      "@hookform/error-message": {
+        "from": "@hookform/error-message",
+        "version": "2.0.1",
+        "resolved": "https://registry.npmjs.org/@hookform/error-message/-/error-message-2.0.1.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@hookform+error-message@2.0.1_react-dom@18.3.1_react@18.3.1__react-hook-form@7.54.2_react@18.3.1__react@18.3.1/node_modules/@hookform/error-message"
+      },
+      "@medusajs/js-sdk": {
+        "from": "@medusajs/js-sdk",
+        "version": "2.8.2",
+        "resolved": "https://registry.npmjs.org/@medusajs/js-sdk/-/js-sdk-2.8.2.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@medusajs+js-sdk@2.8.2_awilix@8.0.1/node_modules/@medusajs/js-sdk"
+      },
+      "@medusajs/types": {
+        "from": "@medusajs/types",
+        "version": "2.8.2",
+        "resolved": "https://registry.npmjs.org/@medusajs/types/-/types-2.8.2.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@medusajs+types@2.8.2_awilix@8.0.1/node_modules/@medusajs/types"
+      },
+      "@medusajs/ui": {
+        "from": "@medusajs/ui",
+        "version": "2.4.3",
+        "resolved": "https://registry.npmjs.org/@medusajs/ui/-/ui-2.4.3.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@medusajs+ui@2.4.3_@types+react-dom@18.3.5_@types+react@18.3.18__@types+react@18.3.18_r_9f0028ce6dce1dd557a8608e38f9f7fb/node_modules/@medusajs/ui"
+      },
+      "@meilisearch/instant-meilisearch": {
+        "from": "@meilisearch/instant-meilisearch",
+        "version": "0.26.0",
+        "resolved": "https://registry.npmjs.org/@meilisearch/instant-meilisearch/-/instant-meilisearch-0.26.0.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@meilisearch+instant-meilisearch@0.26.0/node_modules/@meilisearch/instant-meilisearch"
+      },
+      "@paypal/paypal-js": {
+        "from": "@paypal/paypal-js",
+        "version": "7.1.1",
+        "resolved": "https://registry.npmjs.org/@paypal/paypal-js/-/paypal-js-7.1.1.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@paypal+paypal-js@7.1.1/node_modules/@paypal/paypal-js"
+      },
+      "@paypal/react-paypal-js": {
+        "from": "@paypal/react-paypal-js",
+        "version": "8.8.3",
+        "resolved": "https://registry.npmjs.org/@paypal/react-paypal-js/-/react-paypal-js-8.8.3.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@paypal+react-paypal-js@8.8.3_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@paypal/react-paypal-js"
+      },
+      "@stripe/react-stripe-js": {
+        "from": "@stripe/react-stripe-js",
+        "version": "2.9.0",
+        "resolved": "https://registry.npmjs.org/@stripe/react-stripe-js/-/react-stripe-js-2.9.0.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@stripe+react-stripe-js@2.9.0_@stripe+stripe-js@2.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@stripe/react-stripe-js"
+      },
+      "@stripe/stripe-js": {
+        "from": "@stripe/stripe-js",
+        "version": "2.4.0",
+        "resolved": "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-2.4.0.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@stripe+stripe-js@2.4.0/node_modules/@stripe/stripe-js"
+      },
+      "algoliasearch": {
+        "from": "algoliasearch",
+        "version": "4.24.0",
+        "resolved": "https://registry.npmjs.org/algoliasearch/-/algoliasearch-4.24.0.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/algoliasearch@4.24.0/node_modules/algoliasearch"
+      },
+      "axios": {
+        "from": "axios",
+        "version": "1.7.9",
+        "resolved": "https://registry.npmjs.org/axios/-/axios-1.7.9.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/axios@1.7.9/node_modules/axios"
+      },
+      "lodash": {
+        "from": "lodash",
+        "version": "4.17.21",
+        "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/lodash@4.17.21/node_modules/lodash"
+      },
+      "medusajs-launch-utils": {
+        "from": "medusajs-launch-utils",
+        "version": "0.0.11",
+        "resolved": "https://registry.npmjs.org/medusajs-launch-utils/-/medusajs-launch-utils-0.0.11.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/medusajs-launch-utils@0.0.11/node_modules/medusajs-launch-utils"
+      },
+      "next": {
+        "from": "next",
+        "version": "15.3.2",
+        "resolved": "https://registry.npmjs.org/next/-/next-15.3.2.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/next@15.3.2_@babel+core@7.26.0_@playwright+test@1.49.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next"
+      },
+      "pg": {
+        "from": "pg",
+        "version": "8.13.1",
+        "resolved": "https://registry.npmjs.org/pg/-/pg-8.13.1.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/pg@8.13.1/node_modules/pg"
+      },
+      "qs": {
+        "from": "qs",
+        "version": "6.13.1",
+        "resolved": "https://registry.npmjs.org/qs/-/qs-6.13.1.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/qs@6.13.1/node_modules/qs"
+      },
+      "react": {
+        "from": "react",
+        "version": "18.3.1",
+        "resolved": "https://registry.npmjs.org/react/-/react-18.3.1.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/react@18.3.1/node_modules/react"
+      },
+      "react-country-flag": {
+        "from": "react-country-flag",
+        "version": "3.1.0",
+        "resolved": "https://registry.npmjs.org/react-country-flag/-/react-country-flag-3.1.0.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/react-country-flag@3.1.0_react@18.3.1/node_modules/react-country-flag"
+      },
+      "react-dom": {
+        "from": "react-dom",
+        "version": "18.3.1",
+        "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom"
+      },
+      "react-instantsearch-hooks-web": {
+        "from": "react-instantsearch-hooks-web",
+        "version": "6.47.3",
+        "resolved": "https://registry.npmjs.org/react-instantsearch-hooks-web/-/react-instantsearch-hooks-web-6.47.3.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/react-instantsearch-hooks-web@6.47.3_algoliasearch@4.24.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-instantsearch-hooks-web"
+      },
+      "react-intersection-observer": {
+        "from": "react-intersection-observer",
+        "version": "9.14.0",
+        "resolved": "https://registry.npmjs.org/react-intersection-observer/-/react-intersection-observer-9.14.0.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/react-intersection-observer@9.14.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-intersection-observer"
+      },
+      "server-only": {
+        "from": "server-only",
+        "version": "0.0.1",
+        "resolved": "https://registry.npmjs.org/server-only/-/server-only-0.0.1.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/server-only@0.0.1/node_modules/server-only"
+      },
+      "tailwindcss-radix": {
+        "from": "tailwindcss-radix",
+        "version": "2.9.0",
+        "resolved": "https://registry.npmjs.org/tailwindcss-radix/-/tailwindcss-radix-2.9.0.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/tailwindcss-radix@2.9.0/node_modules/tailwindcss-radix"
+      },
+      "webpack": {
+        "from": "webpack",
+        "version": "5.97.1",
+        "resolved": "https://registry.npmjs.org/webpack/-/webpack-5.97.1.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/webpack@5.97.1/node_modules/webpack"
+      }
+    },
+    "devDependencies": {
+      "@babel/core": {
+        "from": "@babel/core",
+        "version": "7.26.0",
+        "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.26.0.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@babel+core@7.26.0/node_modules/@babel/core"
+      },
+      "@medusajs/client-types": {
+        "from": "@medusajs/client-types",
+        "version": "0.2.12",
+        "resolved": "https://registry.npmjs.org/@medusajs/client-types/-/client-types-0.2.12.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@medusajs+client-types@0.2.12/node_modules/@medusajs/client-types"
+      },
+      "@medusajs/ui-preset": {
+        "from": "@medusajs/ui-preset",
+        "version": "1.1.4",
+        "resolved": "https://registry.npmjs.org/@medusajs/ui-preset/-/ui-preset-1.1.4.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@medusajs+ui-preset@1.1.4_tailwindcss@3.4.17/node_modules/@medusajs/ui-preset"
+      },
+      "@playwright/test": {
+        "from": "@playwright/test",
+        "version": "1.49.1",
+        "resolved": "https://registry.npmjs.org/@playwright/test/-/test-1.49.1.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@playwright+test@1.49.1/node_modules/@playwright/test"
+      },
+      "@types/lodash": {
+        "from": "@types/lodash",
+        "version": "4.17.13",
+        "resolved": "https://registry.npmjs.org/@types/lodash/-/lodash-4.17.13.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@types+lodash@4.17.13/node_modules/@types/lodash"
+      },
+      "@types/node": {
+        "from": "@types/node",
+        "version": "20.11.22",
+        "resolved": "https://registry.npmjs.org/@types/node/-/node-20.11.22.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@types+node@20.11.22/node_modules/@types/node"
+      },
+      "@types/pg": {
+        "from": "@types/pg",
+        "version": "8.11.10",
+        "resolved": "https://registry.npmjs.org/@types/pg/-/pg-8.11.10.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@types+pg@8.11.10/node_modules/@types/pg"
+      },
+      "@types/react": {
+        "from": "@types/react",
+        "version": "18.3.18",
+        "resolved": "https://registry.npmjs.org/@types/react/-/react-18.3.18.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@types+react@18.3.18/node_modules/@types/react"
+      },
+      "@types/react-dom": {
+        "from": "@types/react-dom",
+        "version": "18.3.5",
+        "resolved": "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.3.5.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@types+react-dom@18.3.5_@types+react@18.3.18/node_modules/@types/react-dom"
+      },
+      "@types/react-instantsearch-dom": {
+        "from": "@types/react-instantsearch-dom",
+        "version": "6.12.8",
+        "resolved": "https://registry.npmjs.org/@types/react-instantsearch-dom/-/react-instantsearch-dom-6.12.8.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/@types+react-instantsearch-dom@6.12.8/node_modules/@types/react-instantsearch-dom"
+      },
+      "ansi-colors": {
+        "from": "ansi-colors",
+        "version": "4.1.3",
+        "resolved": "https://registry.npmjs.org/ansi-colors/-/ansi-colors-4.1.3.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/ansi-colors@4.1.3/node_modules/ansi-colors"
+      },
+      "autoprefixer": {
+        "from": "autoprefixer",
+        "version": "10.4.20",
+        "resolved": "https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.20.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/autoprefixer@10.4.20_postcss@8.4.49/node_modules/autoprefixer"
+      },
+      "babel-loader": {
+        "from": "babel-loader",
+        "version": "9.2.1",
+        "resolved": "https://registry.npmjs.org/babel-loader/-/babel-loader-9.2.1.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/babel-loader@9.2.1_@babel+core@7.26.0_webpack@5.97.1/node_modules/babel-loader"
+      },
+      "eslint": {
+        "from": "eslint",
+        "version": "8.57.0",
+        "resolved": "https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/eslint@8.57.0/node_modules/eslint"
+      },
+      "eslint-config-next": {
+        "from": "eslint-config-next",
+        "version": "15.3.2",
+        "resolved": "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-15.3.2.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/eslint-config-next@15.3.2_eslint@8.57.0_typescript@5.8.3/node_modules/eslint-config-next"
+      },
+      "postcss": {
+        "from": "postcss",
+        "version": "8.4.49",
+        "resolved": "https://registry.npmjs.org/postcss/-/postcss-8.4.49.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/postcss@8.4.49/node_modules/postcss"
+      },
+      "prettier": {
+        "from": "prettier",
+        "version": "3.5.3",
+        "resolved": "https://registry.npmjs.org/prettier/-/prettier-3.5.3.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/prettier@3.5.3/node_modules/prettier"
+      },
+      "tailwindcss": {
+        "from": "tailwindcss",
+        "version": "3.4.17",
+        "resolved": "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.17.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/tailwindcss@3.4.17/node_modules/tailwindcss"
+      },
+      "typescript": {
+        "from": "typescript",
+        "version": "5.8.3",
+        "resolved": "https://registry.npmjs.org/typescript/-/typescript-5.8.3.tgz",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/.pnpm/typescript@5.8.3/node_modules/typescript"
+      }
+    },
+    "unsavedDependencies": {
+      "algoliasearch-helper": {
+        "from": "algoliasearch-helper",
+        "version": "3.25.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/algoliasearch-helper"
+      },
+      "ajv": {
+        "from": "ajv",
+        "version": "6.12.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/ajv"
+      },
+      "acorn": {
+        "from": "acorn",
+        "version": "8.14.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/acorn"
+      },
+      "acorn-jsx": {
+        "from": "acorn-jsx",
+        "version": "5.3.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/acorn-jsx"
+      },
+      "abbrev": {
+        "from": "abbrev",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/abbrev"
+      },
+      "ajv-keywords": {
+        "from": "ajv-keywords",
+        "version": "3.5.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/ajv-keywords"
+      },
+      "any-promise": {
+        "from": "any-promise",
+        "version": "1.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/any-promise"
+      },
+      "aria-hidden": {
+        "from": "aria-hidden",
+        "version": "1.2.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/aria-hidden"
+      },
+      "ajv-formats": {
+        "from": "ajv-formats",
+        "version": "2.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/ajv-formats"
+      },
+      "argparse": {
+        "from": "argparse",
+        "version": "2.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/argparse"
+      },
+      "arg": {
+        "from": "arg",
+        "version": "5.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/arg"
+      },
+      "ansi-styles": {
+        "from": "ansi-styles",
+        "version": "4.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/ansi-styles"
+      },
+      "anymatch": {
+        "from": "anymatch",
+        "version": "3.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/anymatch"
+      },
+      "array-buffer-byte-length": {
+        "from": "array-buffer-byte-length",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/array-buffer-byte-length"
+      },
+      "array.prototype.flat": {
+        "from": "array.prototype.flat",
+        "version": "1.3.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/array.prototype.flat"
+      },
+      "array-includes": {
+        "from": "array-includes",
+        "version": "3.1.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/array-includes"
+      },
+      "ansi-regex": {
+        "from": "ansi-regex",
+        "version": "5.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/ansi-regex"
+      },
+      "array.prototype.findlastindex": {
+        "from": "array.prototype.findlastindex",
+        "version": "1.2.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/array.prototype.findlastindex"
+      },
+      "array.prototype.findlast": {
+        "from": "array.prototype.findlast",
+        "version": "1.2.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/array.prototype.findlast"
+      },
+      "aria-query": {
+        "from": "aria-query",
+        "version": "5.3.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/aria-query"
+      },
+      "array.prototype.flatmap": {
+        "from": "array.prototype.flatmap",
+        "version": "1.3.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/array.prototype.flatmap"
+      },
+      "arraybuffer.prototype.slice": {
+        "from": "arraybuffer.prototype.slice",
+        "version": "1.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/arraybuffer.prototype.slice"
+      },
+      "array.prototype.tosorted": {
+        "from": "array.prototype.tosorted",
+        "version": "1.1.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/array.prototype.tosorted"
+      },
+      "available-typed-arrays": {
+        "from": "available-typed-arrays",
+        "version": "1.0.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/available-typed-arrays"
+      },
+      "ast-types-flow": {
+        "from": "ast-types-flow",
+        "version": "0.0.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/ast-types-flow"
+      },
+      "awilix": {
+        "from": "awilix",
+        "version": "8.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/awilix"
+      },
+      "asynckit": {
+        "from": "asynckit",
+        "version": "0.4.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/asynckit"
+      },
+      "async-function": {
+        "from": "async-function",
+        "version": "1.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/async-function"
+      },
+      "big.js": {
+        "from": "big.js",
+        "version": "5.2.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/big.js"
+      },
+      "axe-core": {
+        "from": "axe-core",
+        "version": "4.10.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/axe-core"
+      },
+      "browserslist": {
+        "from": "browserslist",
+        "version": "4.24.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/browserslist"
+      },
+      "bignumber.js": {
+        "from": "bignumber.js",
+        "version": "9.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/bignumber.js"
+      },
+      "brace-expansion": {
+        "from": "brace-expansion",
+        "version": "1.1.11",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/brace-expansion"
+      },
+      "binary-extensions": {
+        "from": "binary-extensions",
+        "version": "2.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/binary-extensions"
+      },
+      "array-union": {
+        "from": "array-union",
+        "version": "2.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/array-union"
+      },
+      "balanced-match": {
+        "from": "balanced-match",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/balanced-match"
+      },
+      "braces": {
+        "from": "braces",
+        "version": "3.0.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/braces"
+      },
+      "busboy": {
+        "from": "busboy",
+        "version": "1.6.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/busboy"
+      },
+      "camelcase-css": {
+        "from": "camelcase-css",
+        "version": "2.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/camelcase-css"
+      },
+      "buffer-from": {
+        "from": "buffer-from",
+        "version": "1.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/buffer-from"
+      },
+      "call-bind": {
+        "from": "call-bind",
+        "version": "1.0.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/call-bind"
+      },
+      "call-bound": {
+        "from": "call-bound",
+        "version": "1.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/call-bound"
+      },
+      "callsites": {
+        "from": "callsites",
+        "version": "3.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/callsites"
+      },
+      "client-only": {
+        "from": "client-only",
+        "version": "0.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/client-only"
+      },
+      "clsx": {
+        "from": "clsx",
+        "version": "1.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/clsx"
+      },
+      "axobject-query": {
+        "from": "axobject-query",
+        "version": "4.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/axobject-query"
+      },
+      "chalk": {
+        "from": "chalk",
+        "version": "4.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/chalk"
+      },
+      "camel-case": {
+        "from": "camel-case",
+        "version": "4.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/camel-case"
+      },
+      "call-bind-apply-helpers": {
+        "from": "call-bind-apply-helpers",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/call-bind-apply-helpers"
+      },
+      "chokidar": {
+        "from": "chokidar",
+        "version": "3.6.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/chokidar"
+      },
+      "color-convert": {
+        "from": "color-convert",
+        "version": "2.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/color-convert"
+      },
+      "caniuse-lite": {
+        "from": "caniuse-lite",
+        "version": "1.0.30001718",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/caniuse-lite"
+      },
+      "chrome-trace-event": {
+        "from": "chrome-trace-event",
+        "version": "1.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/chrome-trace-event"
+      },
+      "cross-fetch": {
+        "from": "cross-fetch",
+        "version": "3.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/cross-fetch"
+      },
+      "copy-to-clipboard": {
+        "from": "copy-to-clipboard",
+        "version": "3.3.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/copy-to-clipboard"
+      },
+      "color-name": {
+        "from": "color-name",
+        "version": "1.1.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/color-name"
+      },
+      "cva": {
+        "from": "cva",
+        "version": "1.0.0-beta.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/cva"
+      },
+      "commondir": {
+        "from": "commondir",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/commondir"
+      },
+      "combined-stream": {
+        "from": "combined-stream",
+        "version": "1.0.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/combined-stream"
+      },
+      "csstype": {
+        "from": "csstype",
+        "version": "3.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/csstype"
+      },
+      "cross-spawn": {
+        "from": "cross-spawn",
+        "version": "7.0.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/cross-spawn"
+      },
+      "commander": {
+        "from": "commander",
+        "version": "4.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/commander"
+      },
+      "concat-map": {
+        "from": "concat-map",
+        "version": "0.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/concat-map"
+      },
+      "cssesc": {
+        "from": "cssesc",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/cssesc"
+      },
+      "data-view-byte-offset": {
+        "from": "data-view-byte-offset",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/data-view-byte-offset"
+      },
+      "damerau-levenshtein": {
+        "from": "damerau-levenshtein",
+        "version": "1.0.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/damerau-levenshtein"
+      },
+      "debug": {
+        "from": "debug",
+        "version": "4.4.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/debug"
+      },
+      "define-data-property": {
+        "from": "define-data-property",
+        "version": "1.1.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/define-data-property"
+      },
+      "data-view-byte-length": {
+        "from": "data-view-byte-length",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/data-view-byte-length"
+      },
+      "decimal.js": {
+        "from": "decimal.js",
+        "version": "10.5.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/decimal.js"
+      },
+      "dir-glob": {
+        "from": "dir-glob",
+        "version": "3.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/dir-glob"
+      },
+      "detect-node-es": {
+        "from": "detect-node-es",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/detect-node-es"
+      },
+      "didyoumean": {
+        "from": "didyoumean",
+        "version": "1.2.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/didyoumean"
+      },
+      "delayed-stream": {
+        "from": "delayed-stream",
+        "version": "1.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/delayed-stream"
+      },
+      "dotenv": {
+        "from": "dotenv",
+        "version": "10.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/dotenv"
+      },
+      "define-properties": {
+        "from": "define-properties",
+        "version": "1.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/define-properties"
+      },
+      "doctrine": {
+        "from": "doctrine",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/doctrine"
+      },
+      "dlv": {
+        "from": "dlv",
+        "version": "1.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/dlv"
+      },
+      "dunder-proto": {
+        "from": "dunder-proto",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/dunder-proto"
+      },
+      "electron-to-chromium": {
+        "from": "electron-to-chromium",
+        "version": "1.5.155",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/electron-to-chromium"
+      },
+      "deep-is": {
+        "from": "deep-is",
+        "version": "0.1.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/deep-is"
+      },
+      "emojis-list": {
+        "from": "emojis-list",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/emojis-list"
+      },
+      "emoji-regex": {
+        "from": "emoji-regex",
+        "version": "9.2.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/emoji-regex"
+      },
+      "es-define-property": {
+        "from": "es-define-property",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/es-define-property"
+      },
+      "eastasianwidth": {
+        "from": "eastasianwidth",
+        "version": "0.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/eastasianwidth"
+      },
+      "es-set-tostringtag": {
+        "from": "es-set-tostringtag",
+        "version": "2.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/es-set-tostringtag"
+      },
+      "es-object-atoms": {
+        "from": "es-object-atoms",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/es-object-atoms"
+      },
+      "es-abstract": {
+        "from": "es-abstract",
+        "version": "1.23.9",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/es-abstract"
+      },
+      "enhanced-resolve": {
+        "from": "enhanced-resolve",
+        "version": "5.18.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/enhanced-resolve"
+      },
+      "convert-source-map": {
+        "from": "convert-source-map",
+        "version": "2.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/convert-source-map"
+      },
+      "es-module-lexer": {
+        "from": "es-module-lexer",
+        "version": "1.7.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/es-module-lexer"
+      },
+      "es-iterator-helpers": {
+        "from": "es-iterator-helpers",
+        "version": "1.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/es-iterator-helpers"
+      },
+      "es-errors": {
+        "from": "es-errors",
+        "version": "1.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/es-errors"
+      },
+      "es-to-primitive": {
+        "from": "es-to-primitive",
+        "version": "1.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/es-to-primitive"
+      },
+      "es-shim-unscopables": {
+        "from": "es-shim-unscopables",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/es-shim-unscopables"
+      },
+      "eslint-plugin-react-hooks": {
+        "from": "eslint-plugin-react-hooks",
+        "version": "5.0.0-canary-7118f5dd7-20230705",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/eslint-plugin-react-hooks"
+      },
+      "escape-string-regexp": {
+        "from": "escape-string-regexp",
+        "version": "4.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/escape-string-regexp"
+      },
+      "eslint-scope": {
+        "from": "eslint-scope",
+        "version": "7.2.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/eslint-scope"
+      },
+      "escalade": {
+        "from": "escalade",
+        "version": "3.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/escalade"
+      },
+      "eslint-plugin-import": {
+        "from": "eslint-plugin-import",
+        "version": "2.31.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/eslint-plugin-import"
+      },
+      "eslint-plugin-jsx-a11y": {
+        "from": "eslint-plugin-jsx-a11y",
+        "version": "6.10.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/eslint-plugin-jsx-a11y"
+      },
+      "eslint-import-resolver-node": {
+        "from": "eslint-import-resolver-node",
+        "version": "0.3.9",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/eslint-import-resolver-node"
+      },
+      "eslint-utils": {
+        "from": "eslint-utils",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/eslint-utils"
+      },
+      "data-view-buffer": {
+        "from": "data-view-buffer",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/data-view-buffer"
+      },
+      "fast-deep-equal": {
+        "from": "fast-deep-equal",
+        "version": "3.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/fast-deep-equal"
+      },
+      "espree": {
+        "from": "espree",
+        "version": "9.6.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/espree"
+      },
+      "eslint-visitor-keys": {
+        "from": "eslint-visitor-keys",
+        "version": "3.4.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/eslint-visitor-keys"
+      },
+      "esquery": {
+        "from": "esquery",
+        "version": "1.6.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/esquery"
+      },
+      "eslint-plugin-react": {
+        "from": "eslint-plugin-react",
+        "version": "7.37.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/eslint-plugin-react"
+      },
+      "eslint-module-utils": {
+        "from": "eslint-module-utils",
+        "version": "2.12.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/eslint-module-utils"
+      },
+      "events": {
+        "from": "events",
+        "version": "3.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/events"
+      },
+      "estraverse": {
+        "from": "estraverse",
+        "version": "5.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/estraverse"
+      },
+      "fast-levenshtein": {
+        "from": "fast-levenshtein",
+        "version": "2.0.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/fast-levenshtein"
+      },
+      "esrecurse": {
+        "from": "esrecurse",
+        "version": "4.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/esrecurse"
+      },
+      "fast-glob": {
+        "from": "fast-glob",
+        "version": "3.3.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/fast-glob"
+      },
+      "fastq": {
+        "from": "fastq",
+        "version": "1.19.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/fastq"
+      },
+      "fast-json-stable-stringify": {
+        "from": "fast-json-stable-stringify",
+        "version": "2.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/fast-json-stable-stringify"
+      },
+      "fill-range": {
+        "from": "fill-range",
+        "version": "7.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/fill-range"
+      },
+      "fast-uri": {
+        "from": "fast-uri",
+        "version": "3.0.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/fast-uri"
+      },
+      "find-cache-dir": {
+        "from": "find-cache-dir",
+        "version": "3.3.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/find-cache-dir"
+      },
+      "fetch-event-stream": {
+        "from": "fetch-event-stream",
+        "version": "0.1.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/fetch-event-stream"
+      },
+      "file-entry-cache": {
+        "from": "file-entry-cache",
+        "version": "6.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/file-entry-cache"
+      },
+      "flatted": {
+        "from": "flatted",
+        "version": "3.3.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/flatted"
+      },
+      "find-up": {
+        "from": "find-up",
+        "version": "4.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/find-up"
+      },
+      "fs.realpath": {
+        "from": "fs.realpath",
+        "version": "1.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/fs.realpath"
+      },
+      "follow-redirects": {
+        "from": "follow-redirects",
+        "version": "1.15.9",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/follow-redirects"
+      },
+      "form-data": {
+        "from": "form-data",
+        "version": "4.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/form-data"
+      },
+      "esutils": {
+        "from": "esutils",
+        "version": "2.0.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/esutils"
+      },
+      "fsevents": {
+        "from": "fsevents",
+        "version": "2.3.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/fsevents"
+      },
+      "flat-cache": {
+        "from": "flat-cache",
+        "version": "3.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/flat-cache"
+      },
+      "fraction.js": {
+        "from": "fraction.js",
+        "version": "4.3.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/fraction.js"
+      },
+      "function-bind": {
+        "from": "function-bind",
+        "version": "1.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/function-bind"
+      },
+      "for-each": {
+        "from": "for-each",
+        "version": "0.3.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/for-each"
+      },
+      "functions-have-names": {
+        "from": "functions-have-names",
+        "version": "1.2.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/functions-have-names"
+      },
+      "get-nonce": {
+        "from": "get-nonce",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/get-nonce"
+      },
+      "get-intrinsic": {
+        "from": "get-intrinsic",
+        "version": "1.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/get-intrinsic"
+      },
+      "function.prototype.name": {
+        "from": "function.prototype.name",
+        "version": "1.1.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/function.prototype.name"
+      },
+      "get-proto": {
+        "from": "get-proto",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/get-proto"
+      },
+      "gensync": {
+        "from": "gensync",
+        "version": "1.0.0-beta.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/gensync"
+      },
+      "functional-red-black-tree": {
+        "from": "functional-red-black-tree",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/functional-red-black-tree"
+      },
+      "get-symbol-description": {
+        "from": "get-symbol-description",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/get-symbol-description"
+      },
+      "glob": {
+        "from": "glob",
+        "version": "7.1.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/glob"
+      },
+      "gopd": {
+        "from": "gopd",
+        "version": "1.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/gopd"
+      },
+      "globals": {
+        "from": "globals",
+        "version": "11.12.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/globals"
+      },
+      "has-bigints": {
+        "from": "has-bigints",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/has-bigints"
+      },
+      "glob-parent": {
+        "from": "glob-parent",
+        "version": "6.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/glob-parent"
+      },
+      "get-tsconfig": {
+        "from": "get-tsconfig",
+        "version": "4.10.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/get-tsconfig"
+      },
+      "has-property-descriptors": {
+        "from": "has-property-descriptors",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/has-property-descriptors"
+      },
+      "glob-to-regexp": {
+        "from": "glob-to-regexp",
+        "version": "0.4.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/glob-to-regexp"
+      },
+      "globby": {
+        "from": "globby",
+        "version": "11.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/globby"
+      },
+      "globalthis": {
+        "from": "globalthis",
+        "version": "1.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/globalthis"
+      },
+      "graceful-fs": {
+        "from": "graceful-fs",
+        "version": "4.2.11",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/graceful-fs"
+      },
+      "has-flag": {
+        "from": "has-flag",
+        "version": "4.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/has-flag"
+      },
+      "has-symbols": {
+        "from": "has-symbols",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/has-symbols"
+      },
+      "htm": {
+        "from": "htm",
+        "version": "3.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/htm"
+      },
+      "hi-base32": {
+        "from": "hi-base32",
+        "version": "0.5.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/hi-base32"
+      },
+      "hogan.js": {
+        "from": "hogan.js",
+        "version": "3.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/hogan.js"
+      },
+      "import-fresh": {
+        "from": "import-fresh",
+        "version": "3.3.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/import-fresh"
+      },
+      "hasown": {
+        "from": "hasown",
+        "version": "2.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/hasown"
+      },
+      "has-tostringtag": {
+        "from": "has-tostringtag",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/has-tostringtag"
+      },
+      "instantsearch.js": {
+        "from": "instantsearch.js",
+        "version": "4.56.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/instantsearch.js"
+      },
+      "inflight": {
+        "from": "inflight",
+        "version": "1.0.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/inflight"
+      },
+      "inherits": {
+        "from": "inherits",
+        "version": "2.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/inherits"
+      },
+      "internal-slot": {
+        "from": "internal-slot",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/internal-slot"
+      },
+      "is-array-buffer": {
+        "from": "is-array-buffer",
+        "version": "3.0.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-array-buffer"
+      },
+      "has-proto": {
+        "from": "has-proto",
+        "version": "1.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/has-proto"
+      },
+      "imurmurhash": {
+        "from": "imurmurhash",
+        "version": "0.1.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/imurmurhash"
+      },
+      "ignore": {
+        "from": "ignore",
+        "version": "5.3.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/ignore"
+      },
+      "is-binary-path": {
+        "from": "is-binary-path",
+        "version": "2.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-binary-path"
+      },
+      "is-async-function": {
+        "from": "is-async-function",
+        "version": "2.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-async-function"
+      },
+      "intl-messageformat": {
+        "from": "intl-messageformat",
+        "version": "10.7.16",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/intl-messageformat"
+      },
+      "is-boolean-object": {
+        "from": "is-boolean-object",
+        "version": "1.2.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-boolean-object"
+      },
+      "is-core-module": {
+        "from": "is-core-module",
+        "version": "2.16.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-core-module"
+      },
+      "is-callable": {
+        "from": "is-callable",
+        "version": "1.2.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-callable"
+      },
+      "is-data-view": {
+        "from": "is-data-view",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-data-view"
+      },
+      "is-extglob": {
+        "from": "is-extglob",
+        "version": "2.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-extglob"
+      },
+      "is-bigint": {
+        "from": "is-bigint",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-bigint"
+      },
+      "is-glob": {
+        "from": "is-glob",
+        "version": "4.0.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-glob"
+      },
+      "is-bun-module": {
+        "from": "is-bun-module",
+        "version": "2.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-bun-module"
+      },
+      "is-fullwidth-code-point": {
+        "from": "is-fullwidth-code-point",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-fullwidth-code-point"
+      },
+      "is-date-object": {
+        "from": "is-date-object",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-date-object"
+      },
+      "is-finalizationregistry": {
+        "from": "is-finalizationregistry",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-finalizationregistry"
+      },
+      "is-number-object": {
+        "from": "is-number-object",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-number-object"
+      },
+      "foreground-child": {
+        "from": "foreground-child",
+        "version": "3.3.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/foreground-child"
+      },
+      "is-generator-function": {
+        "from": "is-generator-function",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-generator-function"
+      },
+      "is-set": {
+        "from": "is-set",
+        "version": "2.0.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-set"
+      },
+      "is-symbol": {
+        "from": "is-symbol",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-symbol"
+      },
+      "is-typed-array": {
+        "from": "is-typed-array",
+        "version": "1.1.15",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-typed-array"
+      },
+      "is-weakref": {
+        "from": "is-weakref",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-weakref"
+      },
+      "is-string": {
+        "from": "is-string",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-string"
+      },
+      "is-weakset": {
+        "from": "is-weakset",
+        "version": "2.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-weakset"
+      },
+      "is-shared-array-buffer": {
+        "from": "is-shared-array-buffer",
+        "version": "1.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-shared-array-buffer"
+      },
+      "is-regex": {
+        "from": "is-regex",
+        "version": "1.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-regex"
+      },
+      "is-weakmap": {
+        "from": "is-weakmap",
+        "version": "2.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-weakmap"
+      },
+      "isarray": {
+        "from": "isarray",
+        "version": "2.0.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/isarray"
+      },
+      "is-number": {
+        "from": "is-number",
+        "version": "7.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-number"
+      },
+      "jackspeak": {
+        "from": "jackspeak",
+        "version": "3.4.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/jackspeak"
+      },
+      "js-tokens": {
+        "from": "js-tokens",
+        "version": "4.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/js-tokens"
+      },
+      "isexe": {
+        "from": "isexe",
+        "version": "2.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/isexe"
+      },
+      "iterator.prototype": {
+        "from": "iterator.prototype",
+        "version": "1.1.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/iterator.prototype"
+      },
+      "jiti": {
+        "from": "jiti",
+        "version": "1.21.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/jiti"
+      },
+      "jsesc": {
+        "from": "jsesc",
+        "version": "3.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/jsesc"
+      },
+      "js-yaml": {
+        "from": "js-yaml",
+        "version": "4.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/js-yaml"
+      },
+      "jest-worker": {
+        "from": "jest-worker",
+        "version": "27.5.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/jest-worker"
+      },
+      "json-buffer": {
+        "from": "json-buffer",
+        "version": "3.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/json-buffer"
+      },
+      "is-map": {
+        "from": "is-map",
+        "version": "2.0.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/is-map"
+      },
+      "json-parse-even-better-errors": {
+        "from": "json-parse-even-better-errors",
+        "version": "2.3.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/json-parse-even-better-errors"
+      },
+      "json-schema-traverse": {
+        "from": "json-schema-traverse",
+        "version": "0.4.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/json-schema-traverse"
+      },
+      "json5": {
+        "from": "json5",
+        "version": "2.2.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/json5"
+      },
+      "keyv": {
+        "from": "keyv",
+        "version": "4.5.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/keyv"
+      },
+      "language-subtag-registry": {
+        "from": "language-subtag-registry",
+        "version": "0.3.23",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/language-subtag-registry"
+      },
+      "json-stable-stringify-without-jsonify": {
+        "from": "json-stable-stringify-without-jsonify",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/json-stable-stringify-without-jsonify"
+      },
+      "jsx-ast-utils": {
+        "from": "jsx-ast-utils",
+        "version": "3.3.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/jsx-ast-utils"
+      },
+      "loader-runner": {
+        "from": "loader-runner",
+        "version": "4.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/loader-runner"
+      },
+      "language-tags": {
+        "from": "language-tags",
+        "version": "1.0.9",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/language-tags"
+      },
+      "levn": {
+        "from": "levn",
+        "version": "0.4.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/levn"
+      },
+      "lines-and-columns": {
+        "from": "lines-and-columns",
+        "version": "1.2.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/lines-and-columns"
+      },
+      "locate-path": {
+        "from": "locate-path",
+        "version": "5.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/locate-path"
+      },
+      "lilconfig": {
+        "from": "lilconfig",
+        "version": "3.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/lilconfig"
+      },
+      "lodash.merge": {
+        "from": "lodash.merge",
+        "version": "4.6.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/lodash.merge"
+      },
+      "make-dir": {
+        "from": "make-dir",
+        "version": "3.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/make-dir"
+      },
+      "loader-utils": {
+        "from": "loader-utils",
+        "version": "2.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/loader-utils"
+      },
+      "meilisearch": {
+        "from": "meilisearch",
+        "version": "0.25.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/meilisearch"
+      },
+      "loose-envify": {
+        "from": "loose-envify",
+        "version": "1.4.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/loose-envify"
+      },
+      "math-intrinsics": {
+        "from": "math-intrinsics",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/math-intrinsics"
+      },
+      "lower-case": {
+        "from": "lower-case",
+        "version": "2.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/lower-case"
+      },
+      "lru-cache": {
+        "from": "lru-cache",
+        "version": "5.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/lru-cache"
+      },
+      "micromatch": {
+        "from": "micromatch",
+        "version": "4.0.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/micromatch"
+      },
+      "mime-db": {
+        "from": "mime-db",
+        "version": "1.52.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/mime-db"
+      },
+      "merge2": {
+        "from": "merge2",
+        "version": "1.4.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/merge2"
+      },
+      "mini-svg-data-uri": {
+        "from": "mini-svg-data-uri",
+        "version": "1.4.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/mini-svg-data-uri"
+      },
+      "mkdirp": {
+        "from": "mkdirp",
+        "version": "0.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/mkdirp"
+      },
+      "merge-stream": {
+        "from": "merge-stream",
+        "version": "2.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/merge-stream"
+      },
+      "mime-types": {
+        "from": "mime-types",
+        "version": "2.1.35",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/mime-types"
+      },
+      "minimist": {
+        "from": "minimist",
+        "version": "1.2.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/minimist"
+      },
+      "mz": {
+        "from": "mz",
+        "version": "2.7.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/mz"
+      },
+      "minimatch": {
+        "from": "minimatch",
+        "version": "3.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/minimatch"
+      },
+      "nanoid": {
+        "from": "nanoid",
+        "version": "3.3.11",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/nanoid"
+      },
+      "natural-compare": {
+        "from": "natural-compare",
+        "version": "1.4.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/natural-compare"
+      },
+      "ms": {
+        "from": "ms",
+        "version": "2.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/ms"
+      },
+      "neo-async": {
+        "from": "neo-async",
+        "version": "2.6.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/neo-async"
+      },
+      "napi-postinstall": {
+        "from": "napi-postinstall",
+        "version": "0.2.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/napi-postinstall"
+      },
+      "no-case": {
+        "from": "no-case",
+        "version": "3.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/no-case"
+      },
+      "nopt": {
+        "from": "nopt",
+        "version": "1.0.10",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/nopt"
+      },
+      "normalize-path": {
+        "from": "normalize-path",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/normalize-path"
+      },
+      "object-assign": {
+        "from": "object-assign",
+        "version": "4.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/object-assign"
+      },
+      "minipass": {
+        "from": "minipass",
+        "version": "7.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/minipass"
+      },
+      "node-releases": {
+        "from": "node-releases",
+        "version": "2.0.19",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/node-releases"
+      },
+      "object-inspect": {
+        "from": "object-inspect",
+        "version": "1.13.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/object-inspect"
+      },
+      "normalize-range": {
+        "from": "normalize-range",
+        "version": "0.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/normalize-range"
+      },
+      "object-hash": {
+        "from": "object-hash",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/object-hash"
+      },
+      "node-fetch": {
+        "from": "node-fetch",
+        "version": "2.7.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/node-fetch"
+      },
+      "object.fromentries": {
+        "from": "object.fromentries",
+        "version": "2.0.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/object.fromentries"
+      },
+      "object.assign": {
+        "from": "object.assign",
+        "version": "4.1.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/object.assign"
+      },
+      "object.groupby": {
+        "from": "object.groupby",
+        "version": "1.0.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/object.groupby"
+      },
+      "object-keys": {
+        "from": "object-keys",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/object-keys"
+      },
+      "once": {
+        "from": "once",
+        "version": "1.4.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/once"
+      },
+      "p-limit": {
+        "from": "p-limit",
+        "version": "2.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/p-limit"
+      },
+      "object.entries": {
+        "from": "object.entries",
+        "version": "1.1.9",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/object.entries"
+      },
+      "obuf": {
+        "from": "obuf",
+        "version": "1.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/obuf"
+      },
+      "p-try": {
+        "from": "p-try",
+        "version": "2.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/p-try"
+      },
+      "pascal-case": {
+        "from": "pascal-case",
+        "version": "3.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pascal-case"
+      },
+      "package-json-from-dist": {
+        "from": "package-json-from-dist",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/package-json-from-dist"
+      },
+      "path-exists": {
+        "from": "path-exists",
+        "version": "4.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/path-exists"
+      },
+      "object.values": {
+        "from": "object.values",
+        "version": "1.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/object.values"
+      },
+      "optionator": {
+        "from": "optionator",
+        "version": "0.9.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/optionator"
+      },
+      "path-is-absolute": {
+        "from": "path-is-absolute",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/path-is-absolute"
+      },
+      "path-parse": {
+        "from": "path-parse",
+        "version": "1.0.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/path-parse"
+      },
+      "path-type": {
+        "from": "path-type",
+        "version": "4.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/path-type"
+      },
+      "own-keys": {
+        "from": "own-keys",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/own-keys"
+      },
+      "pg-int8": {
+        "from": "pg-int8",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pg-int8"
+      },
+      "p-locate": {
+        "from": "p-locate",
+        "version": "4.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/p-locate"
+      },
+      "pg-pool": {
+        "from": "pg-pool",
+        "version": "3.10.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pg-pool"
+      },
+      "path-key": {
+        "from": "path-key",
+        "version": "3.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/path-key"
+      },
+      "pg-protocol": {
+        "from": "pg-protocol",
+        "version": "1.10.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pg-protocol"
+      },
+      "pg-types": {
+        "from": "pg-types",
+        "version": "4.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pg-types"
+      },
+      "path-scurry": {
+        "from": "path-scurry",
+        "version": "1.11.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/path-scurry"
+      },
+      "pg-connection-string": {
+        "from": "pg-connection-string",
+        "version": "2.9.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pg-connection-string"
+      },
+      "pg-numeric": {
+        "from": "pg-numeric",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pg-numeric"
+      },
+      "pify": {
+        "from": "pify",
+        "version": "2.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pify"
+      },
+      "pg-cloudflare": {
+        "from": "pg-cloudflare",
+        "version": "1.2.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pg-cloudflare"
+      },
+      "pgpass": {
+        "from": "pgpass",
+        "version": "1.0.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pgpass"
+      },
+      "picomatch": {
+        "from": "picomatch",
+        "version": "2.3.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/picomatch"
+      },
+      "picocolors": {
+        "from": "picocolors",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/picocolors"
+      },
+      "pkg-dir": {
+        "from": "pkg-dir",
+        "version": "4.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pkg-dir"
+      },
+      "pirates": {
+        "from": "pirates",
+        "version": "4.0.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/pirates"
+      },
+      "possible-typed-array-names": {
+        "from": "possible-typed-array-names",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/possible-typed-array-names"
+      },
+      "postcss-import": {
+        "from": "postcss-import",
+        "version": "15.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/postcss-import"
+      },
+      "playwright": {
+        "from": "playwright",
+        "version": "1.52.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/playwright"
+      },
+      "postcss-value-parser": {
+        "from": "postcss-value-parser",
+        "version": "4.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/postcss-value-parser"
+      },
+      "postcss-nested": {
+        "from": "postcss-nested",
+        "version": "6.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/postcss-nested"
+      },
+      "postgres-array": {
+        "from": "postgres-array",
+        "version": "3.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/postgres-array"
+      },
+      "postcss-js": {
+        "from": "postcss-js",
+        "version": "4.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/postcss-js"
+      },
+      "postcss-selector-parser": {
+        "from": "postcss-selector-parser",
+        "version": "6.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/postcss-selector-parser"
+      },
+      "playwright-core": {
+        "from": "playwright-core",
+        "version": "1.52.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/playwright-core"
+      },
+      "postgres-bytea": {
+        "from": "postgres-bytea",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/postgres-bytea"
+      },
+      "postgres-date": {
+        "from": "postgres-date",
+        "version": "2.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/postgres-date"
+      },
+      "preact": {
+        "from": "preact",
+        "version": "10.26.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/preact"
+      },
+      "prelude-ls": {
+        "from": "prelude-ls",
+        "version": "1.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/prelude-ls"
+      },
+      "postgres-range": {
+        "from": "postgres-range",
+        "version": "1.1.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/postgres-range"
+      },
+      "parent-module": {
+        "from": "parent-module",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/parent-module"
+      },
+      "prop-types": {
+        "from": "prop-types",
+        "version": "15.8.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/prop-types"
+      },
+      "postgres-interval": {
+        "from": "postgres-interval",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/postgres-interval"
+      },
+      "prism-react-renderer": {
+        "from": "prism-react-renderer",
+        "version": "2.4.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/prism-react-renderer"
+      },
+      "promise-polyfill": {
+        "from": "promise-polyfill",
+        "version": "8.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/promise-polyfill"
+      },
+      "proxy-from-env": {
+        "from": "proxy-from-env",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/proxy-from-env"
+      },
+      "react-currency-input-field": {
+        "from": "react-currency-input-field",
+        "version": "3.10.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/react-currency-input-field"
+      },
+      "react-hook-form": {
+        "from": "react-hook-form",
+        "version": "7.56.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/react-hook-form"
+      },
+      "react-aria": {
+        "from": "react-aria",
+        "version": "3.39.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/react-aria"
+      },
+      "queue-microtask": {
+        "from": "queue-microtask",
+        "version": "1.2.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/queue-microtask"
+      },
+      "react-instantsearch-hooks": {
+        "from": "react-instantsearch-hooks",
+        "version": "6.47.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/react-instantsearch-hooks"
+      },
+      "prismjs": {
+        "from": "prismjs",
+        "version": "1.30.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/prismjs"
+      },
+      "punycode": {
+        "from": "punycode",
+        "version": "2.3.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/punycode"
+      },
+      "radix-ui": {
+        "from": "radix-ui",
+        "version": "1.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/radix-ui"
+      },
+      "react-remove-scroll": {
+        "from": "react-remove-scroll",
+        "version": "2.7.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/react-remove-scroll"
+      },
+      "randombytes": {
+        "from": "randombytes",
+        "version": "2.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/randombytes"
+      },
+      "react-style-singleton": {
+        "from": "react-style-singleton",
+        "version": "2.2.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/react-style-singleton"
+      },
+      "react-remove-scroll-bar": {
+        "from": "react-remove-scroll-bar",
+        "version": "2.3.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/react-remove-scroll-bar"
+      },
+      "read-cache": {
+        "from": "read-cache",
+        "version": "1.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/read-cache"
+      },
+      "readdirp": {
+        "from": "readdirp",
+        "version": "3.6.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/readdirp"
+      },
+      "react-is": {
+        "from": "react-is",
+        "version": "16.13.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/react-is"
+      },
+      "regexpp": {
+        "from": "regexpp",
+        "version": "3.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/regexpp"
+      },
+      "reflect.getprototypeof": {
+        "from": "reflect.getprototypeof",
+        "version": "1.0.10",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/reflect.getprototypeof"
+      },
+      "resolve-from": {
+        "from": "resolve-from",
+        "version": "4.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/resolve-from"
+      },
+      "require-from-string": {
+        "from": "require-from-string",
+        "version": "2.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/require-from-string"
+      },
+      "regexp.prototype.flags": {
+        "from": "regexp.prototype.flags",
+        "version": "1.5.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/regexp.prototype.flags"
+      },
+      "react-stately": {
+        "from": "react-stately",
+        "version": "3.37.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/react-stately"
+      },
+      "resolve": {
+        "from": "resolve",
+        "version": "1.22.10",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/resolve"
+      },
+      "resolve-pkg-maps": {
+        "from": "resolve-pkg-maps",
+        "version": "1.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/resolve-pkg-maps"
+      },
+      "rimraf": {
+        "from": "rimraf",
+        "version": "3.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/rimraf"
+      },
+      "schema-utils": {
+        "from": "schema-utils",
+        "version": "2.7.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/schema-utils"
+      },
+      "safe-regex-test": {
+        "from": "safe-regex-test",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/safe-regex-test"
+      },
+      "safe-push-apply": {
+        "from": "safe-push-apply",
+        "version": "1.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/safe-push-apply"
+      },
+      "reusify": {
+        "from": "reusify",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/reusify"
+      },
+      "search-insights": {
+        "from": "search-insights",
+        "version": "2.17.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/search-insights"
+      },
+      "safe-array-concat": {
+        "from": "safe-array-concat",
+        "version": "1.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/safe-array-concat"
+      },
+      "run-parallel": {
+        "from": "run-parallel",
+        "version": "1.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/run-parallel"
+      },
+      "safe-buffer": {
+        "from": "safe-buffer",
+        "version": "5.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/safe-buffer"
+      },
+      "set-function-name": {
+        "from": "set-function-name",
+        "version": "2.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/set-function-name"
+      },
+      "serialize-javascript": {
+        "from": "serialize-javascript",
+        "version": "6.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/serialize-javascript"
+      },
+      "semver": {
+        "from": "semver",
+        "version": "6.3.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/semver"
+      },
+      "shebang-command": {
+        "from": "shebang-command",
+        "version": "2.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/shebang-command"
+      },
+      "scheduler": {
+        "from": "scheduler",
+        "version": "0.23.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/scheduler"
+      },
+      "side-channel-list": {
+        "from": "side-channel-list",
+        "version": "1.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/side-channel-list"
+      },
+      "shebang-regex": {
+        "from": "shebang-regex",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/shebang-regex"
+      },
+      "side-channel-map": {
+        "from": "side-channel-map",
+        "version": "1.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/side-channel-map"
+      },
+      "side-channel-weakmap": {
+        "from": "side-channel-weakmap",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/side-channel-weakmap"
+      },
+      "side-channel": {
+        "from": "side-channel",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/side-channel"
+      },
+      "sonner": {
+        "from": "sonner",
+        "version": "1.7.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/sonner"
+      },
+      "set-proto": {
+        "from": "set-proto",
+        "version": "1.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/set-proto"
+      },
+      "slash": {
+        "from": "slash",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/slash"
+      },
+      "source-map": {
+        "from": "source-map",
+        "version": "0.6.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/source-map"
+      },
+      "source-map-js": {
+        "from": "source-map-js",
+        "version": "1.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/source-map-js"
+      },
+      "set-function-length": {
+        "from": "set-function-length",
+        "version": "1.2.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/set-function-length"
+      },
+      "signal-exit": {
+        "from": "signal-exit",
+        "version": "4.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/signal-exit"
+      },
+      "split2": {
+        "from": "split2",
+        "version": "4.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/split2"
+      },
+      "streamsearch": {
+        "from": "streamsearch",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/streamsearch"
+      },
+      "source-map-support": {
+        "from": "source-map-support",
+        "version": "0.5.21",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/source-map-support"
+      },
+      "string.prototype.includes": {
+        "from": "string.prototype.includes",
+        "version": "2.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/string.prototype.includes"
+      },
+      "string.prototype.trimend": {
+        "from": "string.prototype.trimend",
+        "version": "1.0.9",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/string.prototype.trimend"
+      },
+      "string.prototype.matchall": {
+        "from": "string.prototype.matchall",
+        "version": "4.0.12",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/string.prototype.matchall"
+      },
+      "string-width-cjs": {
+        "from": "string-width-cjs",
+        "version": "4.2.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/string-width-cjs"
+      },
+      "strip-ansi": {
+        "from": "strip-ansi",
+        "version": "6.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/strip-ansi"
+      },
+      "string-width": {
+        "from": "string-width",
+        "version": "5.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/string-width"
+      },
+      "strip-ansi-cjs": {
+        "from": "strip-ansi-cjs",
+        "version": "6.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/strip-ansi-cjs"
+      },
+      "strip-bom": {
+        "from": "strip-bom",
+        "version": "3.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/strip-bom"
+      },
+      "stable-hash": {
+        "from": "stable-hash",
+        "version": "0.0.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/stable-hash"
+      },
+      "string.prototype.trim": {
+        "from": "string.prototype.trim",
+        "version": "1.2.10",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/string.prototype.trim"
+      },
+      "strip-json-comments": {
+        "from": "strip-json-comments",
+        "version": "3.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/strip-json-comments"
+      },
+      "string.prototype.trimstart": {
+        "from": "string.prototype.trimstart",
+        "version": "1.0.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/string.prototype.trimstart"
+      },
+      "tapable": {
+        "from": "tapable",
+        "version": "2.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/tapable"
+      },
+      "styled-jsx": {
+        "from": "styled-jsx",
+        "version": "5.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/styled-jsx"
+      },
+      "supports-preserve-symlinks-flag": {
+        "from": "supports-preserve-symlinks-flag",
+        "version": "1.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/supports-preserve-symlinks-flag"
+      },
+      "sucrase": {
+        "from": "sucrase",
+        "version": "3.35.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/sucrase"
+      },
+      "string.prototype.repeat": {
+        "from": "string.prototype.repeat",
+        "version": "1.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/string.prototype.repeat"
+      },
+      "tailwind-merge": {
+        "from": "tailwind-merge",
+        "version": "2.6.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/tailwind-merge"
+      },
+      "tailwindcss-animate": {
+        "from": "tailwindcss-animate",
+        "version": "1.0.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/tailwindcss-animate"
+      },
+      "text-table": {
+        "from": "text-table",
+        "version": "0.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/text-table"
+      },
+      "supports-color": {
+        "from": "supports-color",
+        "version": "7.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/supports-color"
+      },
+      "thenify-all": {
+        "from": "thenify-all",
+        "version": "1.6.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/thenify-all"
+      },
+      "terser-webpack-plugin": {
+        "from": "terser-webpack-plugin",
+        "version": "5.3.14",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/terser-webpack-plugin"
+      },
+      "toggle-selection": {
+        "from": "toggle-selection",
+        "version": "1.0.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/toggle-selection"
+      },
+      "to-regex-range": {
+        "from": "to-regex-range",
+        "version": "5.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/to-regex-range"
+      },
+      "tr46": {
+        "from": "tr46",
+        "version": "0.0.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/tr46"
+      },
+      "thenify": {
+        "from": "thenify",
+        "version": "3.3.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/thenify"
+      },
+      "ts-interface-checker": {
+        "from": "ts-interface-checker",
+        "version": "0.1.13",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/ts-interface-checker"
+      },
+      "terser": {
+        "from": "terser",
+        "version": "5.39.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/terser"
+      },
+      "ts-api-utils": {
+        "from": "ts-api-utils",
+        "version": "1.4.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/ts-api-utils"
+      },
+      "tslib": {
+        "from": "tslib",
+        "version": "2.8.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/tslib"
+      },
+      "tinyglobby": {
+        "from": "tinyglobby",
+        "version": "0.2.13",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/tinyglobby"
+      },
+      "typed-array-buffer": {
+        "from": "typed-array-buffer",
+        "version": "1.0.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/typed-array-buffer"
+      },
+      "typed-array-byte-offset": {
+        "from": "typed-array-byte-offset",
+        "version": "1.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/typed-array-byte-offset"
+      },
+      "tsconfig-paths": {
+        "from": "tsconfig-paths",
+        "version": "3.15.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/tsconfig-paths"
+      },
+      "type-fest": {
+        "from": "type-fest",
+        "version": "0.20.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/type-fest"
+      },
+      "type-check": {
+        "from": "type-check",
+        "version": "0.4.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/type-check"
+      },
+      "update-browserslist-db": {
+        "from": "update-browserslist-db",
+        "version": "1.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/update-browserslist-db"
+      },
+      "unbox-primitive": {
+        "from": "unbox-primitive",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/unbox-primitive"
+      },
+      "typed-array-length": {
+        "from": "typed-array-length",
+        "version": "1.0.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/typed-array-length"
+      },
+      "v8-compile-cache": {
+        "from": "v8-compile-cache",
+        "version": "2.4.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/v8-compile-cache"
+      },
+      "typed-array-byte-length": {
+        "from": "typed-array-byte-length",
+        "version": "1.0.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/typed-array-byte-length"
+      },
+      "uri-js": {
+        "from": "uri-js",
+        "version": "4.4.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/uri-js"
+      },
+      "use-callback-ref": {
+        "from": "use-callback-ref",
+        "version": "1.3.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/use-callback-ref"
+      },
+      "util-deprecate": {
+        "from": "util-deprecate",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/util-deprecate"
+      },
+      "use-sync-external-store": {
+        "from": "use-sync-external-store",
+        "version": "1.5.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/use-sync-external-store"
+      },
+      "watchpack": {
+        "from": "watchpack",
+        "version": "2.4.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/watchpack"
+      },
+      "use-sidecar": {
+        "from": "use-sidecar",
+        "version": "1.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/use-sidecar"
+      },
+      "whatwg-url": {
+        "from": "whatwg-url",
+        "version": "5.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/whatwg-url"
+      },
+      "which-boxed-primitive": {
+        "from": "which-boxed-primitive",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/which-boxed-primitive"
+      },
+      "which": {
+        "from": "which",
+        "version": "2.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/which"
+      },
+      "webpack-sources": {
+        "from": "webpack-sources",
+        "version": "3.2.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/webpack-sources"
+      },
+      "which-typed-array": {
+        "from": "which-typed-array",
+        "version": "1.1.19",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/which-typed-array"
+      },
+      "word-wrap": {
+        "from": "word-wrap",
+        "version": "1.2.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/word-wrap"
+      },
+      "which-builtin-type": {
+        "from": "which-builtin-type",
+        "version": "1.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/which-builtin-type"
+      },
+      "wrap-ansi-cjs": {
+        "from": "wrap-ansi-cjs",
+        "version": "7.0.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/wrap-ansi-cjs"
+      },
+      "which-collection": {
+        "from": "which-collection",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/which-collection"
+      },
+      "webidl-conversions": {
+        "from": "webidl-conversions",
+        "version": "3.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/webidl-conversions"
+      },
+      "wrappy": {
+        "from": "wrappy",
+        "version": "1.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/wrappy"
+      },
+      "@algolia/cache-common": {
+        "from": "@algolia/cache-common",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/cache-common"
+      },
+      "@algolia/cache-browser-local-storage": {
+        "from": "@algolia/cache-browser-local-storage",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/cache-browser-local-storage"
+      },
+      "wrap-ansi": {
+        "from": "wrap-ansi",
+        "version": "8.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/wrap-ansi"
+      },
+      "unrs-resolver": {
+        "from": "unrs-resolver",
+        "version": "1.7.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/unrs-resolver"
+      },
+      "@algolia/client-common": {
+        "from": "@algolia/client-common",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/client-common"
+      },
+      "@algolia/client-search": {
+        "from": "@algolia/client-search",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/client-search"
+      },
+      "@algolia/logger-common": {
+        "from": "@algolia/logger-common",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/logger-common"
+      },
+      "@algolia/cache-in-memory": {
+        "from": "@algolia/cache-in-memory",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/cache-in-memory"
+      },
+      "xtend": {
+        "from": "xtend",
+        "version": "4.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/xtend"
+      },
+      "@algolia/requester-common": {
+        "from": "@algolia/requester-common",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/requester-common"
+      },
+      "@algolia/client-analytics": {
+        "from": "@algolia/client-analytics",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/client-analytics"
+      },
+      "@algolia/logger-console": {
+        "from": "@algolia/logger-console",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/logger-console"
+      },
+      "yallist": {
+        "from": "yallist",
+        "version": "3.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/yallist"
+      },
+      "@algolia/client-personalization": {
+        "from": "@algolia/client-personalization",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/client-personalization"
+      },
+      "yaml": {
+        "from": "yaml",
+        "version": "2.8.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/yaml"
+      },
+      "@algolia/transporter": {
+        "from": "@algolia/transporter",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/transporter"
+      },
+      "@algolia/ui-components-shared": {
+        "from": "@algolia/ui-components-shared",
+        "version": "1.2.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/ui-components-shared"
+      },
+      "@algolia/ui-components-highlight-vdom": {
+        "from": "@algolia/ui-components-highlight-vdom",
+        "version": "1.2.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/ui-components-highlight-vdom"
+      },
+      "@algolia/client-account": {
+        "from": "@algolia/client-account",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/client-account"
+      },
+      "@algolia/requester-browser-xhr": {
+        "from": "@algolia/requester-browser-xhr",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/requester-browser-xhr"
+      },
+      "@algolia/requester-node-http": {
+        "from": "@algolia/requester-node-http",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/requester-node-http"
+      },
+      "@babel/code-frame": {
+        "from": "@babel/code-frame",
+        "version": "7.27.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/code-frame"
+      },
+      "@babel/helper-compilation-targets": {
+        "from": "@babel/helper-compilation-targets",
+        "version": "7.27.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/helper-compilation-targets"
+      },
+      "@babel/helper-module-imports": {
+        "from": "@babel/helper-module-imports",
+        "version": "7.27.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/helper-module-imports"
+      },
+      "@algolia/events": {
+        "from": "@algolia/events",
+        "version": "4.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/events"
+      },
+      "@babel/compat-data": {
+        "from": "@babel/compat-data",
+        "version": "7.27.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/compat-data"
+      },
+      "@babel/helper-validator-option": {
+        "from": "@babel/helper-validator-option",
+        "version": "7.27.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/helper-validator-option"
+      },
+      "@babel/helper-string-parser": {
+        "from": "@babel/helper-string-parser",
+        "version": "7.27.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/helper-string-parser"
+      },
+      "@babel/helpers": {
+        "from": "@babel/helpers",
+        "version": "7.27.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/helpers"
+      },
+      "@babel/generator": {
+        "from": "@babel/generator",
+        "version": "7.27.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/generator"
+      },
+      "@floating-ui/core": {
+        "from": "@floating-ui/core",
+        "version": "1.7.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@floating-ui/core"
+      },
+      "@babel/parser": {
+        "from": "@babel/parser",
+        "version": "7.27.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/parser"
+      },
+      "@floating-ui/dom": {
+        "from": "@floating-ui/dom",
+        "version": "1.7.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@floating-ui/dom"
+      },
+      "@babel/helper-module-transforms": {
+        "from": "@babel/helper-module-transforms",
+        "version": "7.27.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/helper-module-transforms"
+      },
+      "@floating-ui/react-dom": {
+        "from": "@floating-ui/react-dom",
+        "version": "2.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@floating-ui/react-dom"
+      },
+      "@babel/types": {
+        "from": "@babel/types",
+        "version": "7.27.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/types"
+      },
+      "@babel/runtime": {
+        "from": "@babel/runtime",
+        "version": "7.27.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/runtime"
+      },
+      "@babel/traverse": {
+        "from": "@babel/traverse",
+        "version": "7.27.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/traverse"
+      },
+      "@floating-ui/utils": {
+        "from": "@floating-ui/utils",
+        "version": "0.2.9",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@floating-ui/utils"
+      },
+      "@babel/template": {
+        "from": "@babel/template",
+        "version": "7.27.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/template"
+      },
+      "@humanwhocodes/config-array": {
+        "from": "@humanwhocodes/config-array",
+        "version": "0.9.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@humanwhocodes/config-array"
+      },
+      "@babel/helper-validator-identifier": {
+        "from": "@babel/helper-validator-identifier",
+        "version": "7.27.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@babel/helper-validator-identifier"
+      },
+      "@ampproject/remapping": {
+        "from": "@ampproject/remapping",
+        "version": "2.3.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@ampproject/remapping"
+      },
+      "@formatjs/icu-skeleton-parser": {
+        "from": "@formatjs/icu-skeleton-parser",
+        "version": "1.8.14",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@formatjs/icu-skeleton-parser"
+      },
+      "@alloc/quick-lru": {
+        "from": "@alloc/quick-lru",
+        "version": "5.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@alloc/quick-lru"
+      },
+      "@formatjs/fast-memoize": {
+        "from": "@formatjs/fast-memoize",
+        "version": "2.2.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@formatjs/fast-memoize"
+      },
+      "@algolia/recommend": {
+        "from": "@algolia/recommend",
+        "version": "4.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@algolia/recommend"
+      },
+      "@formatjs/icu-messageformat-parser": {
+        "from": "@formatjs/icu-messageformat-parser",
+        "version": "2.11.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@formatjs/icu-messageformat-parser"
+      },
+      "@eslint/eslintrc": {
+        "from": "@eslint/eslintrc",
+        "version": "1.4.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@eslint/eslintrc"
+      },
+      "@internationalized/message": {
+        "from": "@internationalized/message",
+        "version": "3.1.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@internationalized/message"
+      },
+      "@formatjs/ecma402-abstract": {
+        "from": "@formatjs/ecma402-abstract",
+        "version": "2.3.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@formatjs/ecma402-abstract"
+      },
+      "@humanwhocodes/object-schema": {
+        "from": "@humanwhocodes/object-schema",
+        "version": "1.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@humanwhocodes/object-schema"
+      },
+      "@internationalized/string": {
+        "from": "@internationalized/string",
+        "version": "3.2.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@internationalized/string"
+      },
+      "@internationalized/number": {
+        "from": "@internationalized/number",
+        "version": "3.6.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@internationalized/number"
+      },
+      "@jridgewell/gen-mapping": {
+        "from": "@jridgewell/gen-mapping",
+        "version": "0.3.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@jridgewell/gen-mapping"
+      },
+      "@medusajs/icons": {
+        "from": "@medusajs/icons",
+        "version": "2.8.3-preview-20250519000317",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@medusajs/icons"
+      },
+      "@jridgewell/set-array": {
+        "from": "@jridgewell/set-array",
+        "version": "1.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@jridgewell/set-array"
+      },
+      "@next/env": {
+        "from": "@next/env",
+        "version": "14.2.28",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@next/env"
+      },
+      "@jridgewell/sourcemap-codec": {
+        "from": "@jridgewell/sourcemap-codec",
+        "version": "1.5.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@jridgewell/sourcemap-codec"
+      },
+      "@jridgewell/trace-mapping": {
+        "from": "@jridgewell/trace-mapping",
+        "version": "0.3.25",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@jridgewell/trace-mapping"
+      },
+      "@internationalized/date": {
+        "from": "@internationalized/date",
+        "version": "3.8.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@internationalized/date"
+      },
+      "@jridgewell/source-map": {
+        "from": "@jridgewell/source-map",
+        "version": "0.3.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@jridgewell/source-map"
+      },
+      "@formatjs/intl-localematcher": {
+        "from": "@formatjs/intl-localematcher",
+        "version": "0.6.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@formatjs/intl-localematcher"
+      },
+      "@next/swc-darwin-arm64": {
+        "from": "@next/swc-darwin-arm64",
+        "version": "14.2.28",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@next/swc-darwin-arm64"
+      },
+      "@next/eslint-plugin-next": {
+        "from": "@next/eslint-plugin-next",
+        "version": "13.5.11",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@next/eslint-plugin-next"
+      },
+      "@nolyfill/is-core-module": {
+        "from": "@nolyfill/is-core-module",
+        "version": "1.0.39",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@nolyfill/is-core-module"
+      },
+      "@nodelib/fs.stat": {
+        "from": "@nodelib/fs.stat",
+        "version": "2.0.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@nodelib/fs.stat"
+      },
+      "@nodelib/fs.scandir": {
+        "from": "@nodelib/fs.scandir",
+        "version": "2.1.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@nodelib/fs.scandir"
+      },
+      "@nodelib/fs.walk": {
+        "from": "@nodelib/fs.walk",
+        "version": "1.2.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@nodelib/fs.walk"
+      },
+      "@radix-ui/react-alert-dialog": {
+        "from": "@radix-ui/react-alert-dialog",
+        "version": "1.1.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-alert-dialog"
+      },
+      "@radix-ui/primitive": {
+        "from": "@radix-ui/primitive",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/primitive"
+      },
+      "@radix-ui/number": {
+        "from": "@radix-ui/number",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/number"
+      },
+      "@radix-ui/react-accordion": {
+        "from": "@radix-ui/react-accordion",
+        "version": "1.2.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-accordion"
+      },
+      "@radix-ui/react-arrow": {
+        "from": "@radix-ui/react-arrow",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-arrow"
+      },
+      "@pkgjs/parseargs": {
+        "from": "@pkgjs/parseargs",
+        "version": "0.11.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@pkgjs/parseargs"
+      },
+      "@radix-ui/react-avatar": {
+        "from": "@radix-ui/react-avatar",
+        "version": "1.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-avatar"
+      },
+      "@radix-ui/react-collapsible": {
+        "from": "@radix-ui/react-collapsible",
+        "version": "1.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-collapsible"
+      },
+      "@radix-ui/react-checkbox": {
+        "from": "@radix-ui/react-checkbox",
+        "version": "1.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-checkbox"
+      },
+      "@radix-ui/react-aspect-ratio": {
+        "from": "@radix-ui/react-aspect-ratio",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-aspect-ratio"
+      },
+      "@radix-ui/react-accessible-icon": {
+        "from": "@radix-ui/react-accessible-icon",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-accessible-icon"
+      },
+      "@radix-ui/react-compose-refs": {
+        "from": "@radix-ui/react-compose-refs",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-compose-refs"
+      },
+      "@radix-ui/react-context": {
+        "from": "@radix-ui/react-context",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-context"
+      },
+      "@radix-ui/react-dialog": {
+        "from": "@radix-ui/react-dialog",
+        "version": "1.1.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-dialog"
+      },
+      "@jridgewell/resolve-uri": {
+        "from": "@jridgewell/resolve-uri",
+        "version": "3.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@jridgewell/resolve-uri"
+      },
+      "@radix-ui/react-focus-guards": {
+        "from": "@radix-ui/react-focus-guards",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-focus-guards"
+      },
+      "@radix-ui/react-dropdown-menu": {
+        "from": "@radix-ui/react-dropdown-menu",
+        "version": "2.1.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-dropdown-menu"
+      },
+      "@radix-ui/react-focus-scope": {
+        "from": "@radix-ui/react-focus-scope",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-focus-scope"
+      },
+      "@radix-ui/react-context-menu": {
+        "from": "@radix-ui/react-context-menu",
+        "version": "2.2.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-context-menu"
+      },
+      "@radix-ui/react-collection": {
+        "from": "@radix-ui/react-collection",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-collection"
+      },
+      "@radix-ui/react-form": {
+        "from": "@radix-ui/react-form",
+        "version": "0.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-form"
+      },
+      "@isaacs/cliui": {
+        "from": "@isaacs/cliui",
+        "version": "8.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@isaacs/cliui"
+      },
+      "@radix-ui/react-direction": {
+        "from": "@radix-ui/react-direction",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-direction"
+      },
+      "@radix-ui/react-id": {
+        "from": "@radix-ui/react-id",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-id"
+      },
+      "@radix-ui/react-popover": {
+        "from": "@radix-ui/react-popover",
+        "version": "1.1.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-popover"
+      },
+      "@radix-ui/react-label": {
+        "from": "@radix-ui/react-label",
+        "version": "2.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-label"
+      },
+      "@radix-ui/react-hover-card": {
+        "from": "@radix-ui/react-hover-card",
+        "version": "1.1.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-hover-card"
+      },
+      "@radix-ui/react-menu": {
+        "from": "@radix-ui/react-menu",
+        "version": "2.1.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-menu"
+      },
+      "@radix-ui/react-navigation-menu": {
+        "from": "@radix-ui/react-navigation-menu",
+        "version": "1.2.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-navigation-menu"
+      },
+      "@radix-ui/react-popper": {
+        "from": "@radix-ui/react-popper",
+        "version": "1.2.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-popper"
+      },
+      "@radix-ui/react-portal": {
+        "from": "@radix-ui/react-portal",
+        "version": "1.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-portal"
+      },
+      "@radix-ui/react-radio-group": {
+        "from": "@radix-ui/react-radio-group",
+        "version": "1.2.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-radio-group"
+      },
+      "@radix-ui/react-roving-focus": {
+        "from": "@radix-ui/react-roving-focus",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-roving-focus"
+      },
+      "@paypal/sdk-constants": {
+        "from": "@paypal/sdk-constants",
+        "version": "1.0.153",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@paypal/sdk-constants"
+      },
+      "@radix-ui/react-select": {
+        "from": "@radix-ui/react-select",
+        "version": "2.1.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-select"
+      },
+      "@radix-ui/react-menubar": {
+        "from": "@radix-ui/react-menubar",
+        "version": "1.1.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-menubar"
+      },
+      "@radix-ui/react-presence": {
+        "from": "@radix-ui/react-presence",
+        "version": "1.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-presence"
+      },
+      "@radix-ui/react-switch": {
+        "from": "@radix-ui/react-switch",
+        "version": "1.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-switch"
+      },
+      "@radix-ui/react-tabs": {
+        "from": "@radix-ui/react-tabs",
+        "version": "1.1.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-tabs"
+      },
+      "@radix-ui/react-dismissable-layer": {
+        "from": "@radix-ui/react-dismissable-layer",
+        "version": "1.1.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-dismissable-layer"
+      },
+      "@radix-ui/react-toast": {
+        "from": "@radix-ui/react-toast",
+        "version": "1.2.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-toast"
+      },
+      "@radix-ui/react-primitive": {
+        "from": "@radix-ui/react-primitive",
+        "version": "2.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-primitive"
+      },
+      "@radix-ui/react-slider": {
+        "from": "@radix-ui/react-slider",
+        "version": "1.2.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-slider"
+      },
+      "@radix-ui/react-slot": {
+        "from": "@radix-ui/react-slot",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-slot"
+      },
+      "@radix-ui/react-progress": {
+        "from": "@radix-ui/react-progress",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-progress"
+      },
+      "@radix-ui/react-use-callback-ref": {
+        "from": "@radix-ui/react-use-callback-ref",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-use-callback-ref"
+      },
+      "@radix-ui/react-tooltip": {
+        "from": "@radix-ui/react-tooltip",
+        "version": "1.1.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-tooltip"
+      },
+      "@radix-ui/react-scroll-area": {
+        "from": "@radix-ui/react-scroll-area",
+        "version": "1.2.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-scroll-area"
+      },
+      "@radix-ui/react-use-controllable-state": {
+        "from": "@radix-ui/react-use-controllable-state",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-use-controllable-state"
+      },
+      "@radix-ui/react-use-escape-keydown": {
+        "from": "@radix-ui/react-use-escape-keydown",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-use-escape-keydown"
+      },
+      "@radix-ui/react-use-layout-effect": {
+        "from": "@radix-ui/react-use-layout-effect",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-use-layout-effect"
+      },
+      "@radix-ui/react-toolbar": {
+        "from": "@radix-ui/react-toolbar",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-toolbar"
+      },
+      "@radix-ui/react-use-previous": {
+        "from": "@radix-ui/react-use-previous",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-use-previous"
+      },
+      "@radix-ui/rect": {
+        "from": "@radix-ui/rect",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/rect"
+      },
+      "@radix-ui/react-use-size": {
+        "from": "@radix-ui/react-use-size",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-use-size"
+      },
+      "@radix-ui/react-use-rect": {
+        "from": "@radix-ui/react-use-rect",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-use-rect"
+      },
+      "@radix-ui/react-visually-hidden": {
+        "from": "@radix-ui/react-visually-hidden",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-visually-hidden"
+      },
+      "@radix-ui/react-toggle": {
+        "from": "@radix-ui/react-toggle",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-toggle"
+      },
+      "@react-stately/calendar": {
+        "from": "@react-stately/calendar",
+        "version": "3.8.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/calendar"
+      },
+      "@react-stately/combobox": {
+        "from": "@react-stately/combobox",
+        "version": "3.10.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/combobox"
+      },
+      "@radix-ui/react-toggle-group": {
+        "from": "@radix-ui/react-toggle-group",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-toggle-group"
+      },
+      "@react-stately/color": {
+        "from": "@react-stately/color",
+        "version": "3.8.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/color"
+      },
+      "@react-stately/form": {
+        "from": "@react-stately/form",
+        "version": "3.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/form"
+      },
+      "@react-stately/checkbox": {
+        "from": "@react-stately/checkbox",
+        "version": "3.6.13",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/checkbox"
+      },
+      "@react-stately/flags": {
+        "from": "@react-stately/flags",
+        "version": "3.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/flags"
+      },
+      "@react-stately/collections": {
+        "from": "@react-stately/collections",
+        "version": "3.12.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/collections"
+      },
+      "@react-stately/datepicker": {
+        "from": "@react-stately/datepicker",
+        "version": "3.14.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/datepicker"
+      },
+      "@react-stately/data": {
+        "from": "@react-stately/data",
+        "version": "3.12.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/data"
+      },
+      "@react-stately/list": {
+        "from": "@react-stately/list",
+        "version": "3.12.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/list"
+      },
+      "@react-stately/overlays": {
+        "from": "@react-stately/overlays",
+        "version": "3.6.15",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/overlays"
+      },
+      "@react-stately/numberfield": {
+        "from": "@react-stately/numberfield",
+        "version": "3.9.11",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/numberfield"
+      },
+      "@react-stately/disclosure": {
+        "from": "@react-stately/disclosure",
+        "version": "3.0.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/disclosure"
+      },
+      "@radix-ui/react-separator": {
+        "from": "@radix-ui/react-separator",
+        "version": "1.1.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@radix-ui/react-separator"
+      },
+      "@react-stately/menu": {
+        "from": "@react-stately/menu",
+        "version": "3.9.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/menu"
+      },
+      "@react-stately/searchfield": {
+        "from": "@react-stately/searchfield",
+        "version": "3.5.11",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/searchfield"
+      },
+      "@react-stately/dnd": {
+        "from": "@react-stately/dnd",
+        "version": "3.5.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/dnd"
+      },
+      "@react-stately/radio": {
+        "from": "@react-stately/radio",
+        "version": "3.10.12",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/radio"
+      },
+      "@react-stately/tabs": {
+        "from": "@react-stately/tabs",
+        "version": "3.8.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/tabs"
+      },
+      "@react-stately/select": {
+        "from": "@react-stately/select",
+        "version": "3.6.12",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/select"
+      },
+      "@react-stately/toggle": {
+        "from": "@react-stately/toggle",
+        "version": "3.8.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/toggle"
+      },
+      "@react-stately/tooltip": {
+        "from": "@react-stately/tooltip",
+        "version": "3.5.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/tooltip"
+      },
+      "@react-stately/tree": {
+        "from": "@react-stately/tree",
+        "version": "3.8.9",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/tree"
+      },
+      "@react-stately/utils": {
+        "from": "@react-stately/utils",
+        "version": "3.10.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/utils"
+      },
+      "@react-stately/toast": {
+        "from": "@react-stately/toast",
+        "version": "3.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/toast"
+      },
+      "@react-aria/button": {
+        "from": "@react-aria/button",
+        "version": "3.13.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/button"
+      },
+      "@react-stately/selection": {
+        "from": "@react-stately/selection",
+        "version": "3.20.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/selection"
+      },
+      "@react-stately/grid": {
+        "from": "@react-stately/grid",
+        "version": "3.11.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/grid"
+      },
+      "@react-aria/checkbox": {
+        "from": "@react-aria/checkbox",
+        "version": "3.15.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/checkbox"
+      },
+      "@react-stately/table": {
+        "from": "@react-stately/table",
+        "version": "3.14.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/table"
+      },
+      "@react-aria/combobox": {
+        "from": "@react-aria/combobox",
+        "version": "3.12.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/combobox"
+      },
+      "@rtsao/scc": {
+        "from": "@rtsao/scc",
+        "version": "1.1.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@rtsao/scc"
+      },
+      "@react-aria/dialog": {
+        "from": "@react-aria/dialog",
+        "version": "3.5.24",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/dialog"
+      },
+      "@react-aria/calendar": {
+        "from": "@react-aria/calendar",
+        "version": "3.8.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/calendar"
+      },
+      "@react-aria/datepicker": {
+        "from": "@react-aria/datepicker",
+        "version": "3.14.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/datepicker"
+      },
+      "@react-aria/color": {
+        "from": "@react-aria/color",
+        "version": "3.0.6",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/color"
+      },
+      "@react-aria/breadcrumbs": {
+        "from": "@react-aria/breadcrumbs",
+        "version": "3.5.23",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/breadcrumbs"
+      },
+      "@react-stately/slider": {
+        "from": "@react-stately/slider",
+        "version": "3.6.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-stately/slider"
+      },
+      "@react-aria/form": {
+        "from": "@react-aria/form",
+        "version": "3.0.15",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/form"
+      },
+      "@react-aria/disclosure": {
+        "from": "@react-aria/disclosure",
+        "version": "3.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/disclosure"
+      },
+      "@react-aria/live-announcer": {
+        "from": "@react-aria/live-announcer",
+        "version": "3.4.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/live-announcer"
+      },
+      "@react-aria/grid": {
+        "from": "@react-aria/grid",
+        "version": "3.13.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/grid"
+      },
+      "@react-aria/focus": {
+        "from": "@react-aria/focus",
+        "version": "3.20.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/focus"
+      },
+      "@react-aria/i18n": {
+        "from": "@react-aria/i18n",
+        "version": "3.12.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/i18n"
+      },
+      "@react-aria/landmark": {
+        "from": "@react-aria/landmark",
+        "version": "3.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/landmark"
+      },
+      "@react-aria/link": {
+        "from": "@react-aria/link",
+        "version": "3.8.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/link"
+      },
+      "@react-aria/gridlist": {
+        "from": "@react-aria/gridlist",
+        "version": "3.12.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/gridlist"
+      },
+      "@react-aria/meter": {
+        "from": "@react-aria/meter",
+        "version": "3.4.22",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/meter"
+      },
+      "@react-aria/progress": {
+        "from": "@react-aria/progress",
+        "version": "3.4.22",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/progress"
+      },
+      "@react-aria/listbox": {
+        "from": "@react-aria/listbox",
+        "version": "3.14.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/listbox"
+      },
+      "@react-aria/numberfield": {
+        "from": "@react-aria/numberfield",
+        "version": "3.11.13",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/numberfield"
+      },
+      "@react-aria/menu": {
+        "from": "@react-aria/menu",
+        "version": "3.18.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/menu"
+      },
+      "@react-aria/radio": {
+        "from": "@react-aria/radio",
+        "version": "3.11.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/radio"
+      },
+      "@react-aria/separator": {
+        "from": "@react-aria/separator",
+        "version": "3.4.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/separator"
+      },
+      "@react-aria/overlays": {
+        "from": "@react-aria/overlays",
+        "version": "3.27.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/overlays"
+      },
+      "@react-aria/interactions": {
+        "from": "@react-aria/interactions",
+        "version": "3.25.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/interactions"
+      },
+      "@react-aria/dnd": {
+        "from": "@react-aria/dnd",
+        "version": "3.9.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/dnd"
+      },
+      "@react-aria/ssr": {
+        "from": "@react-aria/ssr",
+        "version": "3.9.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/ssr"
+      },
+      "@react-aria/selection": {
+        "from": "@react-aria/selection",
+        "version": "3.24.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/selection"
+      },
+      "@react-aria/searchfield": {
+        "from": "@react-aria/searchfield",
+        "version": "3.8.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/searchfield"
+      },
+      "@react-aria/slider": {
+        "from": "@react-aria/slider",
+        "version": "3.7.18",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/slider"
+      },
+      "@react-aria/switch": {
+        "from": "@react-aria/switch",
+        "version": "3.7.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/switch"
+      },
+      "@react-aria/select": {
+        "from": "@react-aria/select",
+        "version": "3.15.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/select"
+      },
+      "@react-aria/textfield": {
+        "from": "@react-aria/textfield",
+        "version": "3.17.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/textfield"
+      },
+      "@react-aria/toggle": {
+        "from": "@react-aria/toggle",
+        "version": "3.11.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/toggle"
+      },
+      "@react-aria/tooltip": {
+        "from": "@react-aria/tooltip",
+        "version": "3.8.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/tooltip"
+      },
+      "@react-aria/tag": {
+        "from": "@react-aria/tag",
+        "version": "3.5.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/tag"
+      },
+      "@react-aria/table": {
+        "from": "@react-aria/table",
+        "version": "3.17.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/table"
+      },
+      "@react-aria/spinbutton": {
+        "from": "@react-aria/spinbutton",
+        "version": "3.6.14",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/spinbutton"
+      },
+      "@react-aria/tree": {
+        "from": "@react-aria/tree",
+        "version": "3.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/tree"
+      },
+      "@react-aria/tabs": {
+        "from": "@react-aria/tabs",
+        "version": "3.10.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/tabs"
+      },
+      "@react-aria/utils": {
+        "from": "@react-aria/utils",
+        "version": "3.28.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/utils"
+      },
+      "@react-aria/visually-hidden": {
+        "from": "@react-aria/visually-hidden",
+        "version": "3.8.22",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/visually-hidden"
+      },
+      "@swc/counter": {
+        "from": "@swc/counter",
+        "version": "0.1.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@swc/counter"
+      },
+      "@react-aria/toolbar": {
+        "from": "@react-aria/toolbar",
+        "version": "3.0.0-beta.15",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/toolbar"
+      },
+      "@react-types/button": {
+        "from": "@react-types/button",
+        "version": "3.12.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/button"
+      },
+      "@react-aria/toast": {
+        "from": "@react-aria/toast",
+        "version": "3.0.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/toast"
+      },
+      "@react-types/calendar": {
+        "from": "@react-types/calendar",
+        "version": "3.7.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/calendar"
+      },
+      "@react-aria/label": {
+        "from": "@react-aria/label",
+        "version": "3.7.17",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-aria/label"
+      },
+      "@rushstack/eslint-patch": {
+        "from": "@rushstack/eslint-patch",
+        "version": "1.11.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@rushstack/eslint-patch"
+      },
+      "@react-types/checkbox": {
+        "from": "@react-types/checkbox",
+        "version": "3.9.3",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/checkbox"
+      },
+      "@react-types/breadcrumbs": {
+        "from": "@react-types/breadcrumbs",
+        "version": "3.7.12",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/breadcrumbs"
+      },
+      "@react-types/dialog": {
+        "from": "@react-types/dialog",
+        "version": "3.5.17",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/dialog"
+      },
+      "@react-types/listbox": {
+        "from": "@react-types/listbox",
+        "version": "3.6.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/listbox"
+      },
+      "@react-types/link": {
+        "from": "@react-types/link",
+        "version": "3.6.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/link"
+      },
+      "@react-types/combobox": {
+        "from": "@react-types/combobox",
+        "version": "3.13.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/combobox"
+      },
+      "@react-types/menu": {
+        "from": "@react-types/menu",
+        "version": "3.10.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/menu"
+      },
+      "@react-types/grid": {
+        "from": "@react-types/grid",
+        "version": "3.3.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/grid"
+      },
+      "@react-types/meter": {
+        "from": "@react-types/meter",
+        "version": "3.4.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/meter"
+      },
+      "@react-types/numberfield": {
+        "from": "@react-types/numberfield",
+        "version": "3.8.10",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/numberfield"
+      },
+      "@react-types/overlays": {
+        "from": "@react-types/overlays",
+        "version": "3.8.14",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/overlays"
+      },
+      "@react-types/radio": {
+        "from": "@react-types/radio",
+        "version": "3.8.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/radio"
+      },
+      "@react-types/select": {
+        "from": "@react-types/select",
+        "version": "3.9.11",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/select"
+      },
+      "@react-types/shared": {
+        "from": "@react-types/shared",
+        "version": "3.29.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/shared"
+      },
+      "@react-types/searchfield": {
+        "from": "@react-types/searchfield",
+        "version": "3.6.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/searchfield"
+      },
+      "@react-types/datepicker": {
+        "from": "@react-types/datepicker",
+        "version": "3.12.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/datepicker"
+      },
+      "@react-types/slider": {
+        "from": "@react-types/slider",
+        "version": "3.7.10",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/slider"
+      },
+      "@swc/helpers": {
+        "from": "@swc/helpers",
+        "version": "0.5.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@swc/helpers"
+      },
+      "@react-types/switch": {
+        "from": "@react-types/switch",
+        "version": "3.5.10",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/switch"
+      },
+      "@react-types/progress": {
+        "from": "@react-types/progress",
+        "version": "3.5.11",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/progress"
+      },
+      "@react-types/tabs": {
+        "from": "@react-types/tabs",
+        "version": "3.3.14",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/tabs"
+      },
+      "@react-types/textfield": {
+        "from": "@react-types/textfield",
+        "version": "3.12.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/textfield"
+      },
+      "@tanstack/react-virtual": {
+        "from": "@tanstack/react-virtual",
+        "version": "3.13.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@tanstack/react-virtual"
+      },
+      "@react-types/tooltip": {
+        "from": "@react-types/tooltip",
+        "version": "3.4.16",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/tooltip"
+      },
+      "@tanstack/react-table": {
+        "from": "@tanstack/react-table",
+        "version": "8.20.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@tanstack/react-table"
+      },
+      "@tanstack/virtual-core": {
+        "from": "@tanstack/virtual-core",
+        "version": "3.13.8",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@tanstack/virtual-core"
+      },
+      "@tanstack/table-core": {
+        "from": "@tanstack/table-core",
+        "version": "8.20.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@tanstack/table-core"
+      },
+      "@typescript-eslint/types": {
+        "from": "@typescript-eslint/types",
+        "version": "6.21.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@typescript-eslint/types"
+      },
+      "@typescript-eslint/parser": {
+        "from": "@typescript-eslint/parser",
+        "version": "6.21.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@typescript-eslint/parser"
+      },
+      "@typescript-eslint/scope-manager": {
+        "from": "@typescript-eslint/scope-manager",
+        "version": "6.21.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@typescript-eslint/scope-manager"
+      },
+      "@tailwindcss/forms": {
+        "from": "@tailwindcss/forms",
+        "version": "0.5.10",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@tailwindcss/forms"
+      },
+      "@xtuc/ieee754": {
+        "from": "@xtuc/ieee754",
+        "version": "1.2.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@xtuc/ieee754"
+      },
+      "@unrs/resolver-binding-darwin-arm64": {
+        "from": "@unrs/resolver-binding-darwin-arm64",
+        "version": "1.7.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@unrs/resolver-binding-darwin-arm64"
+      },
+      "@typescript-eslint/typescript-estree": {
+        "from": "@typescript-eslint/typescript-estree",
+        "version": "6.21.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@typescript-eslint/typescript-estree"
+      },
+      "@webassemblyjs/floating-point-hex-parser": {
+        "from": "@webassemblyjs/floating-point-hex-parser",
+        "version": "1.13.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/floating-point-hex-parser"
+      },
+      "@react-types/table": {
+        "from": "@react-types/table",
+        "version": "3.12.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/table"
+      },
+      "@webassemblyjs/helper-api-error": {
+        "from": "@webassemblyjs/helper-api-error",
+        "version": "1.13.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/helper-api-error"
+      },
+      "@webassemblyjs/ast": {
+        "from": "@webassemblyjs/ast",
+        "version": "1.14.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/ast"
+      },
+      "@xtuc/long": {
+        "from": "@xtuc/long",
+        "version": "4.2.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@xtuc/long"
+      },
+      "@webassemblyjs/helper-numbers": {
+        "from": "@webassemblyjs/helper-numbers",
+        "version": "1.13.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/helper-numbers"
+      },
+      "@webassemblyjs/helper-buffer": {
+        "from": "@webassemblyjs/helper-buffer",
+        "version": "1.14.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/helper-buffer"
+      },
+      "@webassemblyjs/ieee754": {
+        "from": "@webassemblyjs/ieee754",
+        "version": "1.13.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/ieee754"
+      },
+      "@webassemblyjs/leb128": {
+        "from": "@webassemblyjs/leb128",
+        "version": "1.13.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/leb128"
+      },
+      "@webassemblyjs/helper-wasm-section": {
+        "from": "@webassemblyjs/helper-wasm-section",
+        "version": "1.14.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/helper-wasm-section"
+      },
+      "@webassemblyjs/wasm-opt": {
+        "from": "@webassemblyjs/wasm-opt",
+        "version": "1.14.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/wasm-opt"
+      },
+      "@webassemblyjs/utf8": {
+        "from": "@webassemblyjs/utf8",
+        "version": "1.13.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/utf8"
+      },
+      "@webassemblyjs/wasm-gen": {
+        "from": "@webassemblyjs/wasm-gen",
+        "version": "1.14.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/wasm-gen"
+      },
+      "@types/eslint": {
+        "from": "@types/eslint",
+        "version": "9.6.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/eslint"
+      },
+      "@types/eslint-scope": {
+        "from": "@types/eslint-scope",
+        "version": "3.7.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/eslint-scope"
+      },
+      "@types/estree": {
+        "from": "@types/estree",
+        "version": "1.0.7",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/estree"
+      },
+      "@webassemblyjs/wast-printer": {
+        "from": "@webassemblyjs/wast-printer",
+        "version": "1.14.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/wast-printer"
+      },
+      "@typescript-eslint/visitor-keys": {
+        "from": "@typescript-eslint/visitor-keys",
+        "version": "6.21.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@typescript-eslint/visitor-keys"
+      },
+      "@webassemblyjs/wasm-edit": {
+        "from": "@webassemblyjs/wasm-edit",
+        "version": "1.14.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/wasm-edit"
+      },
+      "@types/json5": {
+        "from": "@types/json5",
+        "version": "0.0.29",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/json5"
+      },
+      "@types/prop-types": {
+        "from": "@types/prop-types",
+        "version": "15.7.14",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/prop-types"
+      },
+      "@types/google.maps": {
+        "from": "@types/google.maps",
+        "version": "3.58.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/google.maps"
+      },
+      "@webassemblyjs/helper-wasm-bytecode": {
+        "from": "@webassemblyjs/helper-wasm-bytecode",
+        "version": "1.13.2",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/helper-wasm-bytecode"
+      },
+      "@types/react-instantsearch-core": {
+        "from": "@types/react-instantsearch-core",
+        "version": "6.26.10",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/react-instantsearch-core"
+      },
+      "@react-types/color": {
+        "from": "@react-types/color",
+        "version": "3.0.4",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@react-types/color"
+      },
+      "@types/dom-speech-recognition": {
+        "from": "@types/dom-speech-recognition",
+        "version": "0.0.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/dom-speech-recognition"
+      },
+      "@types/json-schema": {
+        "from": "@types/json-schema",
+        "version": "7.0.15",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/json-schema"
+      },
+      "@types/hogan.js": {
+        "from": "@types/hogan.js",
+        "version": "3.0.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/hogan.js"
+      },
+      "@types/qs": {
+        "from": "@types/qs",
+        "version": "6.14.0",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/qs"
+      },
+      "@types/prismjs": {
+        "from": "@types/prismjs",
+        "version": "1.26.5",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@types/prismjs"
+      },
+      "@webassemblyjs/wasm-parser": {
+        "from": "@webassemblyjs/wasm-parser",
+        "version": "1.14.1",
+        "path": "/Users/cha/Documents/NightKidz/Website/Production/ProjectNightKidzShop/storefront/node_modules/@webassemblyjs/wasm-parser"
+      }
+    }
+  }
+]

@@ -31,7 +31,8 @@ export const metadata: Metadata = {
 }
 
 export default async function OrderConfirmedPage({ params }: Props) {
-  const order = await getOrder(params.id)
+  const id = params.id
+  const order = await getOrder(id)
   if (!order) {
     return notFound()
   }
