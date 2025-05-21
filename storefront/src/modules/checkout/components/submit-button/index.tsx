@@ -2,7 +2,7 @@
 
 import { Button } from "@medusajs/ui"
 import React from "react"
-import { useFormStatus } from "react-dom"
+import { useFormStatus } from "react"
 
 export function SubmitButton({
   children,

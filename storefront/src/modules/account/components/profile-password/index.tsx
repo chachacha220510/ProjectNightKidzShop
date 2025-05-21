@@ -5,7 +5,7 @@ import React, { useEffect } from "react"
 import Input from "@modules/common/components/input"
 
 import AccountInfo from "../account-info"
-import { useFormState } from "react-dom"
+import { useFormState } from "react"
 import { HttpTypes } from "@medusajs/types"
 
 type MyInformationProps = {

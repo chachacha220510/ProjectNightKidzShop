@@ -3,7 +3,7 @@ import { Badge, Button, clx } from "@medusajs/ui"
 import { useEffect } from "react"
 
 import useToggleState from "@lib/hooks/use-toggle-state"
-import { useFormStatus } from "react-dom"
+import { useFormStatus } from "react"
 
 type AccountInfoProps = {
   label: string

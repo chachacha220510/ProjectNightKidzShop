@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect } from "react"
-import { useFormState } from "react-dom"
+import { useFormState } from "react"
 
 import Input from "@modules/common/components/input"
 
