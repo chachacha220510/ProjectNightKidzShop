@@ -22,7 +22,6 @@
     "algoliasearch": "^4.20.0",
     "axios": "^1.6.7",
     "lodash": "^4.17.21",
-    "medusajs-launch-utils": "latest",
     "next": "^15.0.0",
     "pg": "^8.11.3",
     "qs": "^6.12.1",
@@ -56,4 +55,4 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.2"
   }
-} 
+}

@@ -1,0 +1,2 @@
+[[buildpacks]]
+builders = ["heroku/buildpacks:20"]
