@@ -98,12 +98,31 @@ export default function ProductActions({
     if (!selectedVariant?.id) return null
 
     setIsAdding(true)
-
-    await addToCart({
-      variantId: selectedVariant.id,
-      quantity: 1,
-      countryCode,
-    })
+    
+    try {
+      await addToCart({
+        variantId: selectedVariant.id,
+        quantity: 1,
+        countryCode,
+      })
+    } catch (error) {
+      console.error("Failed to add to cart:", error)
+      // Try again with a short delay - this can help with network issues
+      setTimeout(async () => {
+        try {
+          await addToCart({
+            variantId: selectedVariant.id,
+            quantity: 1,
+            countryCode,
+          })
+        } catch (retryError) {
+          console.error("Retry failed:", retryError)
+        } finally {
+          setIsAdding(false)
+        }
+      }, 500)
+      return
+    }
 
     setIsAdding(false)
   }
