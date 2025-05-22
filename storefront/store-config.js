@@ -1,7 +1,7 @@
 /**
  * @type {import("next").NextConfig}
  */
-function getStoreConfig(config = { features: undefined }) {
+function getStoreConfig(config = {}) {
   return {
     features: config.features ?? {
       productModule: true,

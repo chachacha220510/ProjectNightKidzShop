@@ -33,6 +33,7 @@ yarn-error.log
 .env.*
 !.env.template
 !.env.example
+!.env.production
 
 # Next.js
 .next

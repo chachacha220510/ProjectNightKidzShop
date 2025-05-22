@@ -2,12 +2,14 @@
 
 const { withStoreConfig } = require("./store-config");
 const features = require("./store.config.json");
+const checkEnvVariables = require("./check-env-variables");
+
+checkEnvVariables();
 
 /**
  * @type {import('next').NextConfig}
  */
-const nextConfig = withStoreConfig({
-  features,
+const nextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
@@ -41,17 +43,11 @@ const nextConfig = withStoreConfig({
   typescript: {
     ignoreBuildErrors: true,
   },
-  serverRuntimeConfig: {
-    port: process.env.PORT || 3000,
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
   },
-  serverExternalPackages: [
-    "medusa-interfaces",
-    "@medusajs/medusa",
-    "@medusajs/pricing",
-    "@medusajs/tax",
-    "apollo-server-errors",
-    "driver-posgres",
-  ],
   staticPageGenerationTimeout: 300,
   async headers() {
     return [
@@ -70,6 +66,6 @@ const nextConfig = withStoreConfig({
       },
     ];
   },
-});
+};
 
-module.exports = nextConfig;
+module.exports = withStoreConfig({ ...nextConfig, features });

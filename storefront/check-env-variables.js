@@ -12,7 +12,7 @@ function checkEnvVariables() {
   );
 
   if (missingEnvVars.length > 0) {
-    throw new Error(`
+    console.error(`
 🚫 Error: Missing required environment variables
 
   ${missingEnvVars.join("\n  ")}
@@ -24,6 +24,7 @@ function checkEnvVariables() {
 
 Please set these variables in your .env file or environment before starting the application.
 `);
+    process.exit(1);
   }
 }
 
