@@ -11,11 +11,27 @@ checkEnvVariables();
  */
 const nextConfig = {
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     remotePatterns: [
       {
         protocol: "http",
         hostname: "localhost",
+      },
+      {
+        protocol: process.env.NEXT_PUBLIC_BASE_URL?.startsWith("https")
+          ? "https"
+          : "http",
+        hostname: process.env.NEXT_PUBLIC_BASE_URL?.replace(/^https?:\/\//, ""),
+      },
+      {
+        protocol: "https",
+        hostname: process.env.MEDUSA_BACKEND_URL?.replace("https://", ""),
       },
       {
         protocol: "https",
@@ -37,12 +53,6 @@ const nextConfig = {
     "@medusajs/product",
     "@medusajs/modules-sdk",
   ],
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   logging: {
     fetches: {
       fullUrl: true,

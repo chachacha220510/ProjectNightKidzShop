@@ -1,3 +1,6 @@
+// This file is not used in the Railway boilerplate and should be removed
+// The official template's store-config approach causes issues with Vercel deployment
+
 /**
  * @type {import("next").NextConfig}
  */

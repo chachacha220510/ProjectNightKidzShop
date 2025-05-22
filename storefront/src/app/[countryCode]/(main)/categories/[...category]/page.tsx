@@ -3,53 +3,75 @@ import { notFound } from "next/navigation"
 
 import { getCategoryByHandle, listCategories } from "@lib/data/categories"
 import { listRegions } from "@lib/data/regions"
-import { StoreRegion } from "@medusajs/types"
+import { StoreProductCategory, StoreRegion } from "@medusajs/types"
 import CategoryTemplate from "@modules/categories/templates"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 
 type Props = {
-  params: Promise<{ category: string[]; countryCode: string }>
-  searchParams: Promise<{
+  params: { category: string[]; countryCode: string }
+  searchParams: {
     sortBy?: SortOptions
     page?: string
-  }>
+  }
 }
 
+// Skip generateStaticParams during Vercel builds to avoid connection errors
 export async function generateStaticParams() {
-  const product_categories = await listCategories()
-
-  if (!product_categories) {
+  // Skip in Vercel production builds
+  if (process.env.VERCEL && process.env.NODE_ENV === 'production') {
     return []
   }
 
-  const countryCodes = await listRegions().then((regions: StoreRegion[]) =>
-    regions?.map((r) => r.countries?.map((c) => c.iso_2)).flat()
-  )
+  try {
+    const product_categories = await listCategories()
 
-  const categoryHandles = product_categories.map(
-    (category: any) => category.handle
-  )
+    if (!product_categories || product_categories.length === 0) {
+      return []
+    }
 
-  const staticParams = countryCodes
-    ?.map((countryCode: string | undefined) =>
-      categoryHandles.map((handle: any) => ({
-        countryCode,
-        category: [handle],
-      }))
+    const countryCodes = await listRegions().then((regions: StoreRegion[]) =>
+      regions?.map((r) => r.countries?.map((c) => c.iso_2)).flat()
     )
-    .flat()
 
-  return staticParams
+    const categoryHandles = product_categories.map(
+      (category: any) => category.handle
+    )
+
+    const staticParams = countryCodes
+      ?.map((countryCode: string | undefined) =>
+        categoryHandles.map((handle: any) => ({
+          countryCode,
+          category: [handle],
+        }))
+      )
+      .flat()
+
+    return staticParams
+  } catch (error) {
+    console.error("Error generating static params:", error)
+    return []
+  }
 }
 
-export async function generateMetadata(props: Props): Promise<Metadata> {
-  const params = await props.params
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
-    const productCategory = await getCategoryByHandle(params.category)
+    const response = await getCategoryByHandle(params.category)
+    const product_categories = response.product_categories
 
-    const title = productCategory.name + " | Medusa Store"
+    if (!product_categories || product_categories.length === 0) {
+      return {
+        title: "Category | Medusa Store",
+        description: "Category page",
+      }
+    }
 
-    const description = productCategory.description ?? `${title} category.`
+    const title = product_categories
+      .map((category: StoreProductCategory) => category.name)
+      .join(" | ")
+
+    const description =
+      product_categories[product_categories.length - 1].description ??
+      `${title} category.`
 
     return {
       title: `${title} | Medusa Store`,
@@ -59,27 +81,35 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       },
     }
   } catch (error) {
-    notFound()
+    console.error("Error generating metadata:", error)
+    return {
+      title: "Category | Medusa Store",
+      description: "Category page",
+    }
   }
 }
 
-export default async function CategoryPage(props: Props) {
-  const searchParams = await props.searchParams
-  const params = await props.params
+export default async function CategoryPage({ params, searchParams }: Props) {
   const { sortBy, page } = searchParams
 
-  const productCategory = await getCategoryByHandle(params.category)
+  try {
+    const response = await getCategoryByHandle(params.category)
+    const product_categories = response.product_categories
 
-  if (!productCategory) {
+    if (!product_categories) {
+      notFound()
+    }
+
+    return (
+      <CategoryTemplate
+        categories={product_categories}
+        sortBy={sortBy}
+        page={page}
+        countryCode={params.countryCode}
+      />
+    )
+  } catch (error) {
+    console.error("Error in CategoryPage:", error)
     notFound()
   }
-
-  return (
-    <CategoryTemplate
-      category={productCategory}
-      sortBy={sortBy}
-      page={page}
-      countryCode={params.countryCode}
-    />
-  )
 }

@@ -4,10 +4,11 @@ import { sdk } from "@lib/config"
 import medusaError from "@lib/util/medusa-error"
 import { HttpTypes } from "@medusajs/types"
 import { getCacheOptions } from "./cookies"
+import { cache } from "react"
 
-export const listRegions = async () => {
-  // Skip backend connection during build if the environment variable is set
-  if (process.env.SKIP_MEDUSA_CONNECTION === "true" && process.env.NODE_ENV === "production") {
+export const listRegions = cache(async function() {
+  // Skip data fetching if we're on the server during build
+  if (process.env.VERCEL && process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
     return [{
       id: "dummy-region",
       name: "United States",
@@ -44,11 +45,11 @@ export const listRegions = async () => {
     console.error("Error fetching regions:", error)
     return [] as HttpTypes.StoreRegion[]
   }
-}
+})
 
-export const retrieveRegion = async (id: string) => {
-  // Skip backend connection during build if the environment variable is set
-  if (process.env.SKIP_MEDUSA_CONNECTION === "true" && process.env.NODE_ENV === "production") {
+export const retrieveRegion = cache(async function(id: string) {
+  // Skip data fetching if we're on the server during build
+  if (process.env.VERCEL && process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
     return {
       id: "dummy-region",
       name: "United States",
@@ -85,7 +86,7 @@ export const retrieveRegion = async (id: string) => {
     console.error(`Error fetching region by id ${id}:`, error)
     return null
   }
-}
+})
 
 const regionMap = new Map<string, HttpTypes.StoreRegion>()
 

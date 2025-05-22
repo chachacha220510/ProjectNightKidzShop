@@ -1,7 +1,2 @@
-{
-  "features": {
-    "productModule": true,
-    "customerLogin": true,
-    "search": true
-  }
-} 
+// This file is not used in the Railway boilerplate and should be removed
+// The official template's store-config approach causes issues with Vercel deployment 

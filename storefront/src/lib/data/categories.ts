@@ -1,10 +1,11 @@
 import { sdk } from "@lib/config"
 import { HttpTypes } from "@medusajs/types"
 import { getCacheOptions } from "./cookies"
+import { cache } from "react"
 
-export const listCategories = async (query?: Record<string, any>) => {
-  // Skip backend connection during build if the environment variable is set
-  if (process.env.SKIP_MEDUSA_CONNECTION === "true" && process.env.NODE_ENV === "production") {
+export const listCategories = cache(async function(query?: Record<string, any>) {
+  // Skip data fetching if we're on the server during build
+  if (process.env.VERCEL && process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
     return []
   }
 
@@ -34,20 +35,22 @@ export const listCategories = async (query?: Record<string, any>) => {
     console.error("Error fetching categories:", error)
     return []
   }
-}
+})
 
-export const getCategoryByHandle = async (categoryHandle: string[]) => {
+export const getCategoryByHandle = cache(async function(categoryHandle: string[]) {
   const handle = `${categoryHandle.join("/")}`
 
-  // Skip backend connection during build if the environment variable is set
-  if (process.env.SKIP_MEDUSA_CONNECTION === "true" && process.env.NODE_ENV === "production") {
+  // Skip data fetching if we're on the server during build
+  if (process.env.VERCEL && process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
     return {
-      id: "placeholder",
-      handle: handle,
-      name: handle,
-      products: [],
-      category_children: []
-    } as any
+      product_categories: [{
+        id: "placeholder",
+        handle: handle,
+        name: handle,
+        products: [],
+        category_children: []
+      }]
+    }
   }
 
   const next = {
@@ -67,15 +70,17 @@ export const getCategoryByHandle = async (categoryHandle: string[]) => {
           cache: "force-cache",
         }
       )
-      .then(({ product_categories }) => product_categories[0])
+      .then(({ product_categories }) => ({ product_categories }))
   } catch (error) {
     console.error("Error fetching category by handle:", error)
     return {
-      id: "placeholder",
-      handle: handle,
-      name: handle,
-      products: [],
-      category_children: []
-    } as any
+      product_categories: [{
+        id: "placeholder",
+        handle: handle,
+        name: handle,
+        products: [],
+        category_children: []
+      }]
+    }
   }
-}
+})

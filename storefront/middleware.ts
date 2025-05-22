@@ -13,151 +13,125 @@ const regionMapCache = {
 async function getRegionMap(cacheId: string) {
   const { regionMap, regionMapUpdated } = regionMapCache
 
-  if (!BACKEND_URL) {
-    throw new Error(
-      "Middleware.ts: Error fetching regions. Did you set up regions in your Medusa Admin and define a MEDUSA_BACKEND_URL environment variable? Note that the variable is no longer named NEXT_PUBLIC_MEDUSA_BACKEND_URL."
-    )
+  // Skip API calls during Vercel static builds
+  if (process.env.VERCEL && process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_VERCEL_URL) {
+    return regionMap
   }
 
-  if (
-    !regionMap.keys().next().value ||
-    regionMapUpdated < Date.now() - 3600 * 1000
-  ) {
-    // Fetch regions from Medusa. We can't use the JS client here because middleware is running on Edge and the client needs a Node environment.
-    const { regions } = await fetch(`${BACKEND_URL}/store/regions`, {
-      headers: {
-        "x-publishable-api-key": PUBLISHABLE_API_KEY!,
-      },
-      next: {
-        revalidate: 3600,
-        tags: [`regions-${cacheId}`],
-      },
-      cache: "force-cache",
-    }).then(async (response) => {
-      const json = await response.json()
+  if (!BACKEND_URL) {
+    console.error("Missing MEDUSA_BACKEND_URL environment variable")
+    return regionMap
+  }
 
-      if (!response.ok) {
-        throw new Error(json.message)
+  // Cache region map for 24 hours
+  if (
+    regionMap.size === 0 ||
+    regionMapUpdated < Date.now() - 1000 * 60 * 60 * 24
+  ) {
+    try {
+      const res = await fetch(`${BACKEND_URL}/store/regions`, {
+        headers: {
+          ...(PUBLISHABLE_API_KEY && {
+            "x-publishable-api-key": PUBLISHABLE_API_KEY,
+          }),
+        },
+        cache: "force-cache",
+        next: {
+          tags: ["regions"],
+        },
+      })
+      
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`)
       }
 
-      return json
-    })
+      const { regions } = await res.json()
 
-    if (!regions?.length) {
-      throw new Error(
-        "No regions found. Please set up regions in your Medusa Admin."
-      )
-    }
-
-    // Create a map of country codes to regions.
-    regions.forEach((region: HttpTypes.StoreRegion) => {
-      region.countries?.forEach((c) => {
-        regionMapCache.regionMap.set(c.iso_2 ?? "", region)
+      regions.forEach((region: HttpTypes.StoreRegion) => {
+        region.countries?.forEach((c) => {
+          regionMap.set(c.iso_2.toLowerCase(), region)
+        })
       })
-    })
 
-    regionMapCache.regionMapUpdated = Date.now()
+      regionMapCache.regionMapUpdated = Date.now()
+    } catch (error) {
+      console.error("Error fetching regions in middleware:", error)
+      // In case of error, we'll use the existing map or an empty one
+    }
   }
 
-  return regionMapCache.regionMap
+  return regionMap
+}
+
+function getCountryCodeFromUrl(url: URL) {
+  const parts = url.pathname.split("/")
+  return parts[1]
+}
+
+function countryCodeExists(countryCode: string, regionMap: Map<string, any>) {
+  return regionMap.has(countryCode)
 }
 
 /**
- * Fetches regions from Medusa and sets the region cookie.
- * @param request
- * @param response
- */
-async function getCountryCode(
-  request: NextRequest,
-  regionMap: Map<string, HttpTypes.StoreRegion | number>
-) {
-  try {
-    let countryCode
-
-    const vercelCountryCode = request.headers
-      .get("x-vercel-ip-country")
-      ?.toLowerCase()
-
-    const urlCountryCode = request.nextUrl.pathname.split("/")[1]?.toLowerCase()
-
-    if (urlCountryCode && regionMap.has(urlCountryCode)) {
-      countryCode = urlCountryCode
-    } else if (vercelCountryCode && regionMap.has(vercelCountryCode)) {
-      countryCode = vercelCountryCode
-    } else if (regionMap.has(DEFAULT_REGION)) {
-      countryCode = DEFAULT_REGION
-    } else if (regionMap.keys().next().value) {
-      countryCode = regionMap.keys().next().value
-    }
-
-    return countryCode
-  } catch (error) {
-    if (process.env.NODE_ENV === "development") {
-      console.error(
-        "Middleware.ts: Error getting the country code. Did you set up regions in your Medusa Admin and define a MEDUSA_BACKEND_URL environment variable? Note that the variable is no longer named NEXT_PUBLIC_MEDUSA_BACKEND_URL."
-      )
-    }
-  }
-}
-
-/**
- * Middleware to handle region selection and onboarding status.
+ * Checks if a given country code exists in the region map.
+ * @param {string} countryCode - The country code to check.
+ * @returns {boolean} - Whether or not the country code exists.
  */
 export async function middleware(request: NextRequest) {
-  let redirectUrl = request.nextUrl.href
+  const url = request.nextUrl
 
-  let response = NextResponse.redirect(redirectUrl, 307)
+  try {
+    const countryCode = getCountryCodeFromUrl(url)
 
-  let cacheIdCookie = request.cookies.get("_medusa_cache_id")
+    // Proceed with handling the request
+    const cacheId = request.headers.get("x-vercel-id") || request.ip || "unknown"
+    const regionMap = await getRegionMap(cacheId)
 
-  let cacheId = cacheIdCookie?.value || crypto.randomUUID()
+    // if we're on a deployment and there is no country code
+    // we redirect to the default region
+    if (!countryCode) {
+      // Get the default country code from the header if it exists
+      let defaultCountryCode = request.headers.get("x-vercel-country")?.toLowerCase() || DEFAULT_REGION
 
-  const regionMap = await getRegionMap(cacheId)
+      // Make sure that the default country code exists in the region map
+      if (!countryCodeExists(defaultCountryCode, regionMap)) {
+        defaultCountryCode = DEFAULT_REGION
+      }
 
-  const countryCode = regionMap && (await getCountryCode(request, regionMap))
+      // Construct the redirect URL
+      const redirectUrl = url.pathname === "/" ? `/${defaultCountryCode}` : `/${defaultCountryCode}${url.pathname}`
 
-  const urlHasCountryCode =
-    countryCode && request.nextUrl.pathname.split("/")[1].includes(countryCode)
+      return NextResponse.redirect(new URL(redirectUrl, request.url))
+    }
 
-  // if one of the country codes is in the url and the cache id is set, return next
-  if (urlHasCountryCode && cacheIdCookie) {
-    return NextResponse.next()
-  }
+    const response = NextResponse.next()
 
-  // if one of the country codes is in the url and the cache id is not set, set the cache id and redirect
-  if (urlHasCountryCode && !cacheIdCookie) {
-    response.cookies.set("_medusa_cache_id", cacheId, {
-      maxAge: 60 * 60 * 24,
-    })
+    // Add the region to the request object
+    const region = regionMap.get(countryCode)
+    if (region && countryCode) {
+      response.cookies.set("_medusa_region", region.id, {
+        maxAge: 60 * 60 * 24 * 7,
+        path: "/",
+      })
+    }
 
     return response
-  }
-
-  // check if the url is a static asset
-  if (request.nextUrl.pathname.includes(".")) {
+  } catch (error) {
+    console.error("Middleware error:", error)
+    // Just proceed with the request in case of errors
     return NextResponse.next()
   }
-
-  const redirectPath =
-    request.nextUrl.pathname === "/" ? "" : request.nextUrl.pathname
-
-  const queryString = request.nextUrl.search ? request.nextUrl.search : ""
-
-  // If no country code is set, we redirect to the relevant region.
-  if (!urlHasCountryCode && countryCode) {
-    redirectUrl = `${request.nextUrl.origin}/${countryCode}${redirectPath}${queryString}`
-    response = NextResponse.redirect(`${redirectUrl}`, 307)
-  }
-
-  response.cookies.set("_medusa_cache_id", cacheId, {
-    maxAge: 60 * 60 * 24,
-  })
-
-  return response
 }
 
 export const config = {
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|images|assets|png|svg|jpg|jpeg|gif|webp).*)",
+    /*
+     * Match all paths except for:
+     * 1. /api routes
+     * 2. /_next (Next.js internals)
+     * 3. /_static (inside /public)
+     * 4. all root files inside /public (e.g. /favicon.ico)
+     */
+    "/((?!api/|_next/|_static/|_vercel|[\\w-]+\\.\\w+).*)",
   ],
 } 
