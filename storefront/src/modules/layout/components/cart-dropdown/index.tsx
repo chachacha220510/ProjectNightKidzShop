@@ -22,16 +22,18 @@ const CartDropdown = ({
     undefined
   )
   const [cartDropdownOpen, setCartDropdownOpen] = useState(false)
+  const [cartData, setCartData] = useState<HttpTypes.StoreCart | null | undefined>(cartState)
 
   const open = () => setCartDropdownOpen(true)
   const close = () => setCartDropdownOpen(false)
 
+  // Use the cart data from state to calculate total items
   const totalItems =
-    cartState?.items?.reduce((acc, item) => {
+    cartData?.items?.reduce((acc, item) => {
       return acc + item.quantity
     }, 0) || 0
 
-  const subtotal = cartState?.subtotal ?? 0
+  const subtotal = cartData?.subtotal ?? 0
   const itemRef = useRef<number>(totalItems || 0)
 
   const timedOpen = () => {
@@ -61,6 +63,14 @@ const CartDropdown = ({
 
   const pathname = usePathname()
 
+  // Synchronize the cartData state with the cartState prop
+  useEffect(() => {
+    if (cartState && JSON.stringify(cartState) !== JSON.stringify(cartData)) {
+      setCartData(cartState)
+      itemRef.current = cartState.items?.reduce((acc, item) => acc + item.quantity, 0) || 0
+    }
+  }, [cartState, cartData])
+
   // open cart dropdown when modifying the cart items, but only if we're not on the cart page
   useEffect(() => {
     if (itemRef.current !== totalItems && !pathname.includes("/cart")) {
@@ -68,6 +78,48 @@ const CartDropdown = ({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [totalItems, itemRef.current])
+
+  // Add a new effect to fetch latest cart data when cart-updated event is received
+  useEffect(() => {
+    // Define the event listener
+    const handleCartUpdate = async () => {
+      console.log("Cart updated event received, refreshing cart data");
+      
+      try {
+        // Use our new dedicated cart refresh endpoint that returns enriched cart data
+        const response = await fetch("/api/cart/refresh");
+        
+        if (response.ok) {
+          const data = await response.json();
+          
+          if (data.success && data.cart) {
+            // Update the cart data in state with the enriched data
+            setCartData(data.cart);
+            
+            // Update the open cart dropdown
+            timedOpen();
+          } else {
+            console.error("Error refreshing cart:", data.message);
+            // Fallback to page reload if we can't get enriched data
+            window.location.reload();
+          }
+        }
+      } catch (error) {
+        console.error("Error refreshing cart data:", error);
+        // Fallback to page reload on error
+        window.location.reload();
+      }
+    };
+
+    // Add event listener
+    window.addEventListener("cart-updated", handleCartUpdate);
+
+    // Clean up
+    return () => {
+      window.removeEventListener("cart-updated", handleCartUpdate);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div
@@ -101,10 +153,10 @@ const CartDropdown = ({
             <div className="p-4 flex items-center justify-center">
               <h3 className="text-large-semi">Cart</h3>
             </div>
-            {cartState && cartState.items?.length ? (
+            {cartData && cartData.items?.length ?
               <>
                 <div className="overflow-y-scroll max-h-[402px] px-4 grid grid-cols-1 gap-y-8 no-scrollbar p-px">
-                  {cartState.items
+                  {cartData.items
                     .sort((a, b) => {
                       return (a.created_at ?? "") > (b.created_at ?? "")
                         ? -1
@@ -130,38 +182,26 @@ const CartDropdown = ({
                           <div className="flex flex-col flex-1">
                             <div className="flex items-start justify-between">
                               <div className="flex flex-col overflow-ellipsis whitespace-nowrap mr-4 w-[180px]">
-                                <h3 className="text-base-regular overflow-hidden text-ellipsis">
+                                <h3 className="text-base-regular overflow-hidden text-ellipsis whitespace-nowrap mr-4 w-[180px]">
                                   <LocalizedClientLink
                                     href={`/products/${item.variant?.product?.handle}`}
-                                    data-testid="product-link"
                                   >
                                     {item.title}
                                   </LocalizedClientLink>
                                 </h3>
-                                <LineItemOptions
-                                  variant={item.variant}
-                                  data-testid="cart-item-variant"
-                                  data-value={item.variant}
-                                />
-                                <span
-                                  data-testid="cart-item-quantity"
-                                  data-value={item.quantity}
-                                >
-                                  Quantity: {item.quantity}
-                                </span>
+                                <LineItemOptions variant={item.variant} />
+                                <span>Quantity: {item.quantity}</span>
                               </div>
                               <div className="flex justify-end">
-                                <LineItemPrice item={item} style="tight" />
+                                <LineItemPrice
+                                  region={cartData.region}
+                                  item={item}
+                                  style="tight"
+                                />
                               </div>
                             </div>
                           </div>
-                          <DeleteButton
-                            id={item.id}
-                            className="mt-1"
-                            data-testid="cart-item-remove-button"
-                          >
-                            Remove
-                          </DeleteButton>
+                          <DeleteButton id={item.id} />
                         </div>
                       </div>
                     ))}
@@ -172,29 +212,21 @@ const CartDropdown = ({
                       Subtotal{" "}
                       <span className="font-normal">(excl. taxes)</span>
                     </span>
-                    <span
-                      className="text-large-semi"
-                      data-testid="cart-subtotal"
-                      data-value={subtotal}
-                    >
+                    <span className="text-large-semi">
                       {convertToLocale({
-                        amount: subtotal,
-                        currency_code: cartState.currency_code,
+                        amount: subtotal || 0,
+                        currency_code: cartData.region?.currency_code,
                       })}
                     </span>
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
-                    <Button
-                      className="w-full"
-                      size="large"
-                      data-testid="go-to-cart-button"
-                    >
+                    <Button className="w-full" size="large">
                       Go to cart
                     </Button>
                   </LocalizedClientLink>
                 </div>
               </>
-            ) : (
+            : (
               <div>
                 <div className="flex py-16 flex-col gap-y-4 items-center justify-center">
                   <div className="bg-gray-900 text-small-regular flex items-center justify-center w-6 h-6 rounded-full text-white">

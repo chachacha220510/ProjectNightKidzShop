@@ -11,7 +11,6 @@ import OptionSelect from "@modules/products/components/product-actions/option-se
 
 import MobileActions from "./mobile-actions"
 import ProductPrice from "../product-price"
-import { addToCart } from "@lib/data/cart"
 import { HttpTypes } from "@medusajs/types"
 
 type ProductActionsProps = {
@@ -100,31 +99,43 @@ export default function ProductActions({
     setIsAdding(true)
     
     try {
-      await addToCart({
-        variantId: selectedVariant.id,
-        quantity: 1,
-        countryCode,
+      // Use the API route instead of the server action
+      const response = await fetch("/api/cart/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          variantId: selectedVariant.id,
+          quantity: 1,
+          countryCode,
+        }),
       })
-    } catch (error) {
-      console.error("Failed to add to cart:", error)
-      // Try again with a short delay - this can help with network issues
-      setTimeout(async () => {
-        try {
-          await addToCart({
-            variantId: selectedVariant.id,
-            quantity: 1,
-            countryCode,
-          })
-        } catch (retryError) {
-          console.error("Retry failed:", retryError)
-        } finally {
-          setIsAdding(false)
+      
+      if (!response.ok) {
+        throw new Error(`Failed to add to cart: ${response.status}`)
+      }
+      
+      const data = await response.json()
+      
+      // Dispatch a custom event to notify components that the cart was updated
+      // Include the product and variant data in the event detail
+      window.dispatchEvent(new CustomEvent("cart-updated", {
+        detail: {
+          variantId: selectedVariant.id,
+          productTitle: product.title,
+          variantTitle: selectedVariant.title,
+          success: data.success
         }
-      }, 500)
-      return
+      }));
+      
+      // Also trigger cache revalidation for server components
+      fetch("/api/revalidate?tag=cart,products,layout");
+    } catch (error) {
+      console.error("Error adding to cart:", error)
+    } finally {
+      setIsAdding(false)
     }
-
-    setIsAdding(false)
   }
 
   return (

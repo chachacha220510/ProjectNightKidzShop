@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 export default async function Home({
   params,
 }: {
-  params: { countryCode: string }
+  params: Promise<{ countryCode: string }>
 }) {
-  const { countryCode } = params
+  const { countryCode } = await params
   const collections = await getCollectionsWithProducts(countryCode)
   const region = await getRegion(countryCode)
 
@@ -29,6 +29,7 @@ export default async function Home({
       <Hero />
       <div className="py-12">
         <ul className="flex flex-col gap-x-6">
+          {/* @ts-expect-error Server Component */}
           <FeaturedProducts collections={collections} region={region} />
         </ul>
       </div>

@@ -38,11 +38,11 @@ export const getCartId = async () => {
 export const setCartId = async (cartId: string) => {
   try {
     (await cookies()).set("_medusa_cart_id", cartId, {
-      maxAge: 60 * 60 * 24 * 7,
-      httpOnly: true,
+    maxAge: 60 * 60 * 24 * 7,
+    httpOnly: true,
       sameSite: "lax",
-      secure: process.env.NODE_ENV === "production",
-    })
+    secure: process.env.NODE_ENV === "production",
+  })
   } catch (error) {
     console.error("Error setting cart ID cookie:", error)
   }
