@@ -16,11 +16,10 @@ type InputProps = Omit<
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ type, name, label, touched, required, topLabel, value, onChange, ...props }, ref) => {
+  ({ type, name, label, touched, required, topLabel, ...props }, ref) => {
     const inputRef = React.useRef<HTMLInputElement>(null)
     const [showPassword, setShowPassword] = useState(false)
     const [inputType, setInputType] = useState(type)
-    const [localValue, setLocalValue] = useState(value || "")
 
     useEffect(() => {
       if (type === "password" && showPassword) {
@@ -31,22 +30,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         setInputType("password")
       }
     }, [type, showPassword])
-
-    // Update local value when external value changes
-    useEffect(() => {
-      if (value !== undefined) {
-        setLocalValue(value)
-      }
-    }, [value])
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const newValue = e.target.value
-      setLocalValue(newValue)
-      
-      if (onChange) {
-        onChange(e)
-      }
-    }
 
     useImperativeHandle(ref, () => inputRef.current!)
 
@@ -61,8 +44,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             name={name}
             placeholder=" "
             required={required}
-            value={value !== undefined ? value : localValue}
-            onChange={handleChange}
             className="pt-4 pb-1 block w-full h-11 px-4 mt-0 bg-ui-bg-field border rounded-md appearance-none focus:outline-none focus:ring-0 focus:shadow-borders-interactive-with-active border-ui-border-base hover:bg-ui-bg-field-hover"
             {...props}
             ref={inputRef}

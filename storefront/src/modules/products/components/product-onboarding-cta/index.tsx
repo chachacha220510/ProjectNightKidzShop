@@ -1,9 +1,10 @@
 import { Button, Container, Text } from "@medusajs/ui"
-import { cookies } from "next/headers"
+import { cookies as nextCookies } from "next/headers"
 
-const ProductOnboardingCta = async () => {
-  const cookieStore = await cookies()
-  const isOnboarding = cookieStore.get("_medusa_onboarding")?.value === "true"
+async function ProductOnboardingCta() {
+  const cookies = await nextCookies()
+
+  const isOnboarding = cookies.get("_medusa_onboarding")?.value === "true"
 
   if (!isOnboarding) {
     return null
@@ -18,10 +19,8 @@ const ProductOnboardingCta = async () => {
         <Text className="text-ui-fg-subtle text-small-regular">
           You can now continue setting up your store in the admin.
         </Text>
-        <a href="http://localhost:7001/a/orders?onboarding_step=create_order_next&onboarding_step_status=success">
-          <Button className="w-fit" size="small">
-            Continue setup in admin
-          </Button>
+        <a href="http://localhost:7001/a/orders?onboarding_step=create_order_nextjs">
+          <Button className="w-full">Continue setup in admin</Button>
         </a>
       </div>
     </Container>
