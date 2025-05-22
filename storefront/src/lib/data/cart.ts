@@ -26,31 +26,51 @@ export async function retrieveCart() {
 }
 
 export async function getOrSetCart(countryCode: string) {
-  let cart = await retrieveCart()
-  const region = await getRegion(countryCode)
+  try {
+    let cart = await retrieveCart()
+    const region = await getRegion(countryCode)
 
-  if (!region) {
-    throw new Error(`Region not found for country code: ${countryCode}`)
+    if (!region) {
+      console.error(`Region not found for country code: ${countryCode}`)
+      // Instead of throwing, use a default region if available
+      if (process.env.NEXT_PUBLIC_DEFAULT_REGION) {
+        const defaultRegion = await getRegion(process.env.NEXT_PUBLIC_DEFAULT_REGION)
+        if (defaultRegion) {
+          if (!cart) {
+            const cartResp = await sdk.store.cart.create({ region_id: defaultRegion.id })
+            cart = cartResp.cart
+            await setCartId(cart.id)
+            revalidateTag("cart")
+            return cart
+          }
+        }
+      }
+      // If we still don't have a region, throw a more informative error
+      throw new Error(`Region not found for country code: ${countryCode}`)
+    }
+
+    if (!cart) {
+      const cartResp = await sdk.store.cart.create({ region_id: region.id })
+      cart = cartResp.cart
+      await setCartId(cart.id)
+      revalidateTag("cart")
+    }
+
+    if (cart && cart?.region_id !== region.id) {
+      await sdk.store.cart.update(
+        cart.id,
+        { region_id: region.id },
+        {},
+        await getAuthHeaders()
+      )
+      revalidateTag("cart")
+    }
+
+    return cart
+  } catch (error) {
+    console.error("Error in getOrSetCart:", error)
+    throw error
   }
-
-  if (!cart) {
-    const cartResp = await sdk.store.cart.create({ region_id: region.id })
-    cart = cartResp.cart
-    await setCartId(cart.id)
-    revalidateTag("cart")
-  }
-
-  if (cart && cart?.region_id !== region.id) {
-    await sdk.store.cart.update(
-      cart.id,
-      { region_id: region.id },
-      {},
-      await getAuthHeaders()
-    )
-    revalidateTag("cart")
-  }
-
-  return cart
 }
 
 export async function updateCart(data: HttpTypes.StoreUpdateCart) {
@@ -81,25 +101,62 @@ export async function addToCart({
     throw new Error("Missing variant ID when adding to cart")
   }
 
-  const cart = await getOrSetCart(countryCode)
-  if (!cart) {
-    throw new Error("Error retrieving or creating cart")
-  }
+  try {
+    // First retrieve or create a cart
+    const cart = await getOrSetCart(countryCode)
+    if (!cart) {
+      throw new Error("Error retrieving or creating cart")
+    }
 
-  await sdk.store.cart
-    .createLineItem(
-      cart.id,
-      {
-        variant_id: variantId,
-        quantity,
-      },
-      {},
-      await getAuthHeaders()
-    )
-    .then(() => {
+    // Get auth headers for cart operations
+    const headers = await getAuthHeaders()
+    
+    // Create line item with proper error handling
+    try {
+      const response = await sdk.store.cart.createLineItem(
+        cart.id,
+        {
+          variant_id: variantId,
+          quantity,
+        },
+        {},
+        headers
+      )
+      
       revalidateTag("cart")
-    })
-    .catch(medusaError)
+      return response
+    } catch (lineItemError: any) {
+      console.error("Error creating line item:", lineItemError.message)
+      
+      // If we can't create a line item, try to refresh the cart
+      if (lineItemError.message?.includes("404") || lineItemError.message?.includes("not found")) {
+        // Cart might be stale - try to create a new one
+        const newCartResp = await sdk.store.cart.create({ 
+          region_id: cart.region_id 
+        })
+        await setCartId(newCartResp.cart.id)
+        
+        // Try again with the new cart
+        const retryResponse = await sdk.store.cart.createLineItem(
+          newCartResp.cart.id,
+          {
+            variant_id: variantId,
+            quantity,
+          },
+          {},
+          headers
+        )
+        
+        revalidateTag("cart")
+        return retryResponse
+      }
+      
+      throw lineItemError
+    }
+  } catch (error: any) {
+    console.error("Error in addToCart:", error.message)
+    throw error
+  }
 }
 
 export async function updateLineItem({

@@ -27,16 +27,25 @@ export const removeAuthToken = async () => {
 }
 
 export const getCartId = async () => {
-  return (await cookies()).get("_medusa_cart_id")?.value
+  try {
+    return (await cookies()).get("_medusa_cart_id")?.value
+  } catch (error) {
+    console.error("Error getting cart ID from cookies:", error)
+    return null
+  }
 }
 
 export const setCartId = async (cartId: string) => {
-  (await cookies()).set("_medusa_cart_id", cartId, {
+  try {
+    (await cookies()).set("_medusa_cart_id", cartId, {
     maxAge: 60 * 60 * 24 * 7,
     httpOnly: true,
-    sameSite: "strict",
+      sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
   })
+  } catch (error) {
+    console.error("Error setting cart ID cookie:", error)
+  }
 }
 
 export const removeCartId = async () => {

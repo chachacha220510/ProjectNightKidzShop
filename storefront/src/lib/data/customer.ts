@@ -91,7 +91,7 @@ export async function signOut() {
 export const login = async (_: unknown, formData: FormData) => {
   const email = formData.get("email") as string
   const password = formData.get("password") as string
-  
+
   try {
     await signIn({ email, password })
     return null

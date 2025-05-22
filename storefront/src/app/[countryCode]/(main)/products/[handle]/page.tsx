@@ -6,7 +6,7 @@ import { getRegion, listRegions } from "@lib/data/regions"
 import { getProductByHandle, getProductsList } from "@lib/data/products"
 
 type Props = {
-  params: { countryCode: string; handle: string }
+  params: Promise<{ countryCode: string; handle: string }>
 }
 
 export async function generateStaticParams() {
@@ -43,7 +43,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { handle, countryCode } = params
+  const { handle, countryCode } = await params
+
   const region = await getRegion(countryCode)
 
   if (!region) {
@@ -68,7 +69,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ProductPage({ params }: Props) {
-  const { handle, countryCode } = params
+  const { handle, countryCode } = await params
+  
   const region = await getRegion(countryCode)
 
   if (!region) {

@@ -11,7 +11,6 @@ import OptionSelect from "@modules/products/components/product-actions/option-se
 
 import MobileActions from "./mobile-actions"
 import ProductPrice from "../product-price"
-import { addToCart } from "@lib/data/cart"
 import { HttpTypes } from "@medusajs/types"
 
 type ProductActionsProps = {
@@ -98,14 +97,45 @@ export default function ProductActions({
     if (!selectedVariant?.id) return null
 
     setIsAdding(true)
-
-    await addToCart({
-      variantId: selectedVariant.id,
-      quantity: 1,
-      countryCode,
-    })
-
-    setIsAdding(false)
+    
+    try {
+      // Use the API route instead of the server action
+      const response = await fetch("/api/cart/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          variantId: selectedVariant.id,
+          quantity: 1,
+          countryCode,
+        }),
+      })
+      
+      if (!response.ok) {
+        throw new Error(`Failed to add to cart: ${response.status}`)
+      }
+      
+      const data = await response.json()
+      
+      // Dispatch a custom event to notify components that the cart was updated
+      // Include the product and variant data in the event detail
+      window.dispatchEvent(new CustomEvent("cart-updated", {
+        detail: {
+          variantId: selectedVariant.id,
+          productTitle: product.title,
+          variantTitle: selectedVariant.title,
+          success: data.success
+        }
+      }));
+      
+      // Also trigger cache revalidation for server components
+      fetch("/api/revalidate?tag=cart,products,layout");
+    } catch (error) {
+      console.error("Error adding to cart:", error)
+    } finally {
+      setIsAdding(false)
+    }
   }
 
   return (
