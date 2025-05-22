@@ -1,24 +1,15 @@
-const checkEnvVariables = require("./check-env-variables")
-checkEnvVariables()
+/** @type {import('next').NextConfig} */
 
-const nextConfig = {
+const { withStoreConfig } = require("./store-config");
+const features = require("./store.config.json");
+
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = withStoreConfig({
+  features,
   reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
-    domains: [
-      "localhost",
-      "bucket-production-fe3b.up.railway.app",
-      "backend-production-39d4.up.railway.app",
-      "medusa-public-images.s3.eu-west-1.amazonaws.com",
-      "medusa-server-testing.s3.amazonaws.com",
-      "medusa-server-testing.s3.us-east-1.amazonaws.com",
-      "medusa-public-images.s3.amazonaws.com",
-    ],
     remotePatterns: [
       {
         protocol: "http",
@@ -26,29 +17,29 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "*.railway.app",
+        hostname: "medusa-public-images.s3.eu-west-1.amazonaws.com",
       },
       {
         protocol: "https",
-        hostname: "*.s3.amazonaws.com",
+        hostname: "medusa-server-testing.s3.amazonaws.com",
       },
       {
         protocol: "https",
-        hostname: "*.s3.us-east-1.amazonaws.com",
-      },
-      {
-        protocol: "https",
-        hostname: "*.s3.eu-west-1.amazonaws.com",
+        hostname: "medusa-server-testing.s3.us-east-1.amazonaws.com",
       },
     ],
-    unoptimized: process.env.NODE_ENV === "development",
-    dangerouslyAllowSVG: true,
-    formats: ["image/webp"],
+    deviceSizes: [640, 768, 1024, 1280, 1536],
   },
-  experimental: {
-    serverActions: {
-      bodySizeLimit: "4mb",
-    },
+  transpilePackages: [
+    "@medusajs/ui",
+    "@medusajs/product",
+    "@medusajs/modules-sdk",
+  ],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
   serverRuntimeConfig: {
     port: process.env.PORT || 3000,
@@ -61,6 +52,24 @@ const nextConfig = {
     "apollo-server-errors",
     "driver-posgres",
   ],
-}
+  staticPageGenerationTimeout: 300,
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=0, must-revalidate, s-maxage=60",
+          },
+          {
+            key: "Vary",
+            value: "Cookie, Authorization",
+          },
+        ],
+      },
+    ];
+  },
+});
 
-module.exports = nextConfig
+module.exports = nextConfig;

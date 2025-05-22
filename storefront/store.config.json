@@ -1,0 +1,7 @@
+{
+  "features": {
+    "productModule": true,
+    "customerLogin": true,
+    "search": true
+  }
+} 

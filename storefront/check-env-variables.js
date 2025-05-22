@@ -1,39 +1,30 @@
-const c = require("ansi-colors")
+const c = require("ansi-colors");
 
-const requiredEnvs = [
-  {
-    key: "NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY",
-    // TODO: we need a good doc to point this to
-    description:
-      "Learn how to create a publishable key: https://docs.medusajs.com/v2/resources/storefront-development/publishable-api-keys",
-  },
-]
-
+/**
+ * Checks if required environment variables are set. If not, it throws an error
+ * with a message indicating which variables are missing.
+ * @returns {void}
+ */
 function checkEnvVariables() {
-  const missingEnvs = requiredEnvs.filter(function (env) {
-    return !process.env[env.key]
-  })
+  const requiredEnvVars = ["NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY"];
+  const missingEnvVars = requiredEnvVars.filter(
+    (envVar) => !process.env[envVar]
+  );
 
-  if (missingEnvs.length > 0) {
-    console.error(
-      c.red.bold("\n🚫 Error: Missing required environment variables\n")
-    )
+  if (missingEnvVars.length > 0) {
+    throw new Error(`
+🚫 Error: Missing required environment variables
 
-    missingEnvs.forEach(function (env) {
-      console.error(c.yellow(`  ${c.bold(env.key)}`))
-      if (env.description) {
-        console.error(c.dim(`    ${env.description}\n`))
-      }
-    })
+  ${missingEnvVars.join("\n  ")}
+    ${
+      missingEnvVars.includes("NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY")
+        ? "Learn how to create a publishable key: https://docs.medusajs.com/v2/resources/storefront-development/publishable-api-keys"
+        : ""
+    }
 
-    console.error(
-      c.yellow(
-        "\nPlease set these variables in your .env file or environment before starting the application.\n"
-      )
-    )
-
-    process.exit(1)
+Please set these variables in your .env file or environment before starting the application.
+`);
   }
 }
 
-module.exports = checkEnvVariables
+module.exports = checkEnvVariables;

@@ -6,8 +6,6 @@ dist
 .cache
 build
 coverage
-.env*
-!.env.template
 .DS_Store
 *.orig
 yarn-error.log
@@ -30,8 +28,28 @@ yarn-error.log
 .medusa/server
 !.medusa/client
 
-# Project specific
+# Environment files
+.env
+.env.*
+!.env.template
+!.env.example
+
+# Next.js
 .next
+.vercel
+
 # Database dump files
 tmp/backups/*.sql
 tmp/*.sql
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+.pnpm-debug.log*
+
+# Testing
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth
