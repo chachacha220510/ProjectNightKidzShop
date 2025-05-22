@@ -1,85 +1,110 @@
 import Medusa from "@medusajs/js-sdk"
 
-// Determine the appropriate backend URL based on environment
-let MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL || process.env.MEDUSA_BACKEND_URL
+// Defaults to standard port for Medusa server
+let MEDUSA_BACKEND_URL = "http://localhost:9000"
 
-// For Vercel builds, we need to handle differently to avoid connection errors
-if (process.env.NODE_ENV === "production" && process.env.VERCEL) {
-  console.log("Running on Vercel production - using configured backend URL:", MEDUSA_BACKEND_URL)
+if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
+  MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+}
+
+// Check if we're in a build environment (server-side, production, not client)
+const isBuildEnv = 
+  typeof window === "undefined" && 
+  process.env.NODE_ENV === "production" &&
+  process.env.VERCEL
+
+// Create SDK instance
+export const sdk = new Medusa({
+  baseUrl: MEDUSA_BACKEND_URL,
+  debug: process.env.NODE_ENV === "development",
+  publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+})
+
+// Special NextJS data fetching function to handle static generation
+export async function medusaRequest(
+  resource: string,
+  options?: RequestInit,
+  noAuth = false
+) {
+  // During Vercel build, return mock data
+  if (isBuildEnv) {
+    console.log(`Build environment detected, mocking data for: ${resource}`)
+    return getMockData(resource)
+  }
+
+  // Runtime - make real requests
+  const authHeaders: Record<string, string> = {}
   
-  // If building on Vercel and no URL is set, use a dummy URL for build time
-  if (!MEDUSA_BACKEND_URL) {
-    console.warn("Warning: Backend URL not set in Vercel environment variables")
-    // Don't set a fallback here - we'll handle missing URLs in the customFetch
+  // Add publishable API key if available and needed
+  if (!noAuth && process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY) {
+    authHeaders['x-publishable-api-key'] = process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY
+  }
+
+  // Make the actual request
+  try {
+    const res = await fetch(`${MEDUSA_BACKEND_URL}${resource}`, {
+      ...(options && options),
+      headers: {
+        'Content-Type': 'application/json',
+        ...authHeaders,
+        ...(options?.headers && options.headers),
+      },
+    })
+
+    const data = await res.json()
+
+    return data
+  } catch (error) {
+    console.error(`Error fetching from Medusa: ${error}`)
+    return null
   }
 }
 
-export const sdk = new Medusa({
-  baseUrl: MEDUSA_BACKEND_URL || "",
-  debug: process.env.NODE_ENV === "development",
-  publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
-  
-  // Add custom fetch for handling build-time requests when we're on Vercel
-  customFetch: (...args) => {
-    // During build in Vercel, we're static generating pages
-    // We don't want to make actual API calls during this phase
-    if (process.env.NODE_ENV === "production" && 
-        process.env.VERCEL && 
-        typeof window === "undefined") {
-      console.log("Skipping fetch during Vercel build for path:", args[0])
-      
-      // Return a mock response instead of making a real API call
-      return Promise.resolve({
-        ok: true,
-        status: 200,
-        json: () => {
-          // Return appropriate dummy data based on the endpoint
-          const url = args[0].toString()
-          
-          if (url.includes("/store/collections")) {
-            return Promise.resolve({ 
-              collections: [{ 
-                id: "dummy-collection", 
-                handle: "dummy", 
-                title: "Dummy Collection",
-                products: []
-              }] 
-            })
-          }
-          
-          if (url.includes("/store/regions")) {
-            return Promise.resolve({ 
-              regions: [{
-                id: "dummy-region",
-                name: "United States",
-                currency_code: "usd",
-                countries: [{ 
-                  id: "us", 
-                  iso_2: "us", 
-                  display_name: "United States" 
-                }]
-              }] 
-            })
-          }
-          
-          if (url.includes("/store/product-categories")) {
-            return Promise.resolve({ 
-              product_categories: [{ 
-                id: "dummy-category", 
-                handle: "dummy", 
-                name: "Dummy Category",
-                products: []
-              }] 
-            })
-          }
-          
-          // Default empty response
-          return Promise.resolve({})
-        }
-      } as Response)
+// Mock response data for build time
+function getMockData(resource: string) {
+  // Most common endpoints that Next.js tries to fetch during build
+  if (resource.includes("/store/collections")) {
+    return { 
+      collections: [{ 
+        id: "dummy-collection", 
+        handle: "dummy", 
+        title: "Dummy Collection",
+        products: []
+      }] 
     }
-    
-    // For runtime or development, use the actual fetch
-    return fetch(...args)
   }
-})
+  
+  if (resource.includes("/store/regions")) {
+    return { 
+      regions: [{
+        id: "dummy-region",
+        name: "United States",
+        currency_code: "usd",
+        countries: [{ 
+          id: "us", 
+          iso_2: "us", 
+          display_name: "United States" 
+        }]
+      }] 
+    }
+  }
+  
+  if (resource.includes("/store/product-categories")) {
+    return { 
+      product_categories: [{ 
+        id: "dummy-category", 
+        handle: "dummy", 
+        name: "Dummy Category"
+      }] 
+    }
+  }
+  
+  if (resource.includes("/store/products")) {
+    return {
+      products: []
+    }
+  }
+  
+  // Default empty response
+  return {}
+}
