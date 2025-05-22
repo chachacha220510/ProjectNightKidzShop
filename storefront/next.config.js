@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const { withStoreConfig } = require("./store-config");
-const features = require("./store.config.json");
 const checkEnvVariables = require("./check-env-variables");
 
 checkEnvVariables();
@@ -22,16 +20,6 @@ const nextConfig = {
       {
         protocol: "http",
         hostname: "localhost",
-      },
-      {
-        protocol: process.env.NEXT_PUBLIC_BASE_URL?.startsWith("https")
-          ? "https"
-          : "http",
-        hostname: process.env.NEXT_PUBLIC_BASE_URL?.replace(/^https?:\/\//, ""),
-      },
-      {
-        protocol: "https",
-        hostname: process.env.MEDUSA_BACKEND_URL?.replace("https://", ""),
       },
       {
         protocol: "https",
@@ -78,4 +66,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withStoreConfig({ ...nextConfig, features });
+module.exports = nextConfig;
