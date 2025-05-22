@@ -1,6 +1,6 @@
 "use server"
 
-import { sdk } from "@lib/config"
+import { medusaRequest, sdk } from "@lib/config"
 import { HttpTypes } from "@medusajs/types"
 import { getCacheOptions } from "./cookies"
 
@@ -9,6 +9,15 @@ export const retrieveCollection = async (id: string) => {
     ...(await getCacheOptions("collections")),
   }
 
+  // Try our custom medusaRequest first for better build-time handling
+  try {
+    const { collection } = await medusaRequest(`/store/collections/${id}`)
+    if (collection) return collection
+  } catch (e) {
+    console.error("Error using medusaRequest, falling back to SDK", e)
+  }
+
+  // Fall back to SDK
   return sdk.client
     .fetch<{ collection: HttpTypes.StoreCollection }>(
       `/store/collections/${id}`,
@@ -30,6 +39,19 @@ export const listCollections = async (
   queryParams.limit = queryParams.limit || "100"
   queryParams.offset = queryParams.offset || "0"
 
+  // Try our custom medusaRequest first for better build-time handling
+  try {
+    const { collections } = await medusaRequest(`/store/collections${
+      Object.keys(queryParams).length ? 
+      '?' + new URLSearchParams(queryParams).toString() : 
+      ''
+    }`)
+    if (collections) return { collections, count: collections.length }
+  } catch (e) {
+    console.error("Error using medusaRequest, falling back to SDK", e)
+  }
+
+  // Fall back to SDK
   return sdk.client
     .fetch<{ collections: HttpTypes.StoreCollection[]; count: number }>(
       "/store/collections",
@@ -49,6 +71,15 @@ export const getCollectionByHandle = async (
     ...(await getCacheOptions("collections")),
   }
 
+  // Try our custom medusaRequest first for better build-time handling
+  try {
+    const { collections } = await medusaRequest(`/store/collections?handle=${handle}&fields=*products`)
+    if (collections && collections.length > 0) return collections[0]
+  } catch (e) {
+    console.error("Error using medusaRequest, falling back to SDK", e)
+  }
+
+  // Fall back to SDK
   return sdk.client
     .fetch<HttpTypes.StoreCollectionListResponse>(`/store/collections`, {
       query: { handle, fields: "*products" },
